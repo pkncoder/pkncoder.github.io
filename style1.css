@@ -1,0 +1,154 @@
+h4 {
+   background-color: rgb(145, 145, 145);
+   outline: solid 4px purple;
+   padding: 5px
+}
+.myheader {
+    color: white;
+    background-image: url("keyboard.jpeg");
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+    padding: 50px;
+    margin: contain;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 2px 5px 3px red;
+    font-size: 40px;
+    font-family: Sofia;
+    min-height: 100%;
+    background-position: center;
+}
+.pintro {
+    color: black;
+    font-size: 36px;
+    font-family: Georgia;
+    text-align: center;   
+}
+.navi {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.nofloat {
+    float: none;
+}
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #04AA6D;
+}
+body {
+    background-color: rgba(0, 255, 25, 0.45);
+}
+div {
+    outline: solid 2px red;
+    font-size: 36px;
+    text-align: center;
+    background-color:rgba(0, 255, 25, .3);
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+.column.side {
+  width: 35%;
+}
+.column.middle {
+  width: 62%;
+  border-right: solid 5px red;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: purple;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 18px
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.footer {
+    background: #333;
+    outline: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+.a {
+    text-decoration: none;
+    color: grey;
+}
+#ClickShows {
+    display: none;
+    outline: none;
+}
+#ClickShows1 {
+    display: none;
+    outline: none;
+}
+#ClickShows2 {
+    display: none;
+    outline: none;
+}
+.btton {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 14px 28px;
+  font-size: 28px;
+  cursor: pointer;
+  text-align: center;
+}
