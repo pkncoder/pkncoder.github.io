@@ -53,13 +53,13 @@
         </ul>
 
         <script>
-            fetch("https://www.dnd5eapi.co/api/monsters/")
+            fetch("https://jsonplaceholder.typicode.com/users")
                 .then(res => {
                     return res.json();
                 })
                 .then(data => {
-                    dataforEach(monster => {
-                        const markup = `<li>${monster.results}</li>`;
+                    dataforEach(user => {
+                        const markup = `<li>${user.name}</li>`;
 
                         document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
                     });
