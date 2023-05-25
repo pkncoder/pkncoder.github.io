@@ -33,6 +33,36 @@
         </ul>
     </head>
     <body>
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+</head>
+
+<body>
+    <h5>Data:</h5>
+    <ul>
+    </ul>
+
+    <script>
+        fetch("https://www.dnd5eapi.co/api/monsters/")
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                dataforEach(monster => {
+                    const markup = `<li>${monster.name}</li>`;
+
+                    document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
+                });
+            })
+            .catch(data => console.log(error));
+    </script>
+</body>
         <div class="footer">
             <h1>Resources</h1>
             <table style="width:100%">
