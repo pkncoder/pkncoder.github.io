@@ -1,94 +1,58 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Kia's Cottage</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="style1.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <h1 class='myheader'>Welcome to a Calm Space
-        <hr>Welcome to Kia's Cottage
-    </h1>
-    <p style='font-size:2px'><br></p>
-    <ul style='font-size:18px' ; class="navi">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="News.html">News</a></li>
-        <li><a href="AboutMe.html">About Me</a></li>
-        <li><a href="Cubing.html">Cubing</a></li>
-        <li><a href="Coding.html">Coding</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">DnD</a>
-            <div class="dropdown-content">
-                <a href="DnD-Characters.html">DnD Characters</a>
-                <a href="DnD-Campains.html">DnD Campains</a>
-                <a href="https://dndbeyond.com">DnD Beyond</a>
-            </div>
-        </li>
-        <li><a href="Art.html">Art</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Games</a>
-            <div class="dropdown-content">
+    <head>
+        <title>Kia's Cottage</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="style1.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <h1 class='myheader'>Welcome to a Calm Space<hr>Welcome to Kia's Cottage</h1>
+        <p style='font-size:2px'><br></p>
+        <ul style='font-size:18px'; class="navi">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Cubing.html">Cubing</a></li>
+            <li><a href="Coding.html">Coding</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">DnD</a>
+                <div class="dropdown-content">
+                    <a href="DnD-Characters.html">DnD Characters</a>
+                    <a href="DnD-Campains.html">DnD Campains</a>
+                    <a href="https://dndbeyond.com">DnD Beyond</a>
+                </div>
+            </li>
+            <li><a href="Art.html">Art</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Games</a>
+              <div class="dropdown-content">
                 <a href="Super-Mario-Odyssey.html">Super Mario Odyssey</a>
                 <a href="Generic-Games.html">Generic Games I Play</a>
-            </div>
-        <li><a href="Tools.html">Tools</a></li>
-        </li>
-    </ul>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tools</title>
-    </head>
-
-    <body>
-        <h5>Data:</h5>
-        <ul>
+              </div>
+            </li>
+            <li><a href="Tools.html">Tools</a></li>
         </ul>
-
-        <script>
-            fetch("https://jsonplaceholder.typicode.com/users")
-                .then(res => {
-                    return res.json();
-                })
-                .then(data => {
-                    dataforEach(user => {
-                        const markup = `<li>${user.name}</li>`;
-
-                        document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
-                    });
-                })
-                .catch(data => console.log(error));
-        </script>
+    </head>
+    <body>
+        <div class="footer">
+            <h1>Resources</h1>
+            <table style="width:100%">
+                <tr>
+                    <th>Personal Links</th>
+                    <th>Recomended Links</th>
+                </tr>
+                <tr>
+                    <th><a class='a'; href='https://www.worldcubeassociation.org/persons/2022PRES05'>WCA Personal Records Page</a></th>
+                    <th><a class='a'; href='https://dndbeyond.com'>Dnd Beyond</a></th>
+                </tr>
+                <tr>
+                    <th><a class='a'; href='https://www.youtube.com/@pkner_4545'>Youtube</a></th>
+                    <th><a class='a'; href='https://jperm.net/3x3'>How to Solve a Rubik's Cube</a></th>
+                </tr>
+                <tr>
+                    <th><a class='a'; href='https://github.com/pkncoder'>GitHub</a></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
     </body>
-    <div class="footer">
-        <h1>Resources</h1>
-        <table style="width:100%">
-            <tr>
-                <th>Personal Links</th>
-                <th>Recomended Links</th>
-            </tr>
-            <tr>
-                <th><a class='a' ; href='https://www.worldcubeassociation.org/persons/2022PRES05'>WCA Personal Records
-                        Page</a></th>
-                <th><a class='a' ; href='https://dndbeyond.com'>Dnd Beyond</a></th>
-            </tr>
-            <tr>
-                <th><a class='a' ; href='https://www.youtube.com/@pkner_4545'>Youtube</a></th>
-                <th><a class='a' ; href='https://jperm.net/3x3'>How to Solve a Rubik's Cube</a></th>
-            </tr>
-            <tr>
-                <th><a class='a' ; href='https://github.com/pkncoder'>GitHub</a></th>
-                <th></th>
-            </tr>
-        </table>
-    </div>
-</body>
-
 </html>
