@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <nav>
+        <ul class="navbar">
+            <li class="navbar_item"><a href="/index.html">Home</a></li>
+            <li class="navbar_item"><a href="/calc.html">Calculators</a></li>
+        </ul>
+    </nav>
+    <title>Calculators</title>
+</head>
+
+<body>
+    <br>
+    <input id="result" style="border: solid 3px grey; border-radius: 15px; height: 40px; margin: 10px; text-align: center" value="Answer Box">
+    <br>
+    <div style="display:inline-flex;">
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Distance Calculator</b></p>
+                <p>-</p>
+                <input type="text" id="pointOneDist" class="input_box" placeholder="Point One: ex. (0, 0)">
+                <p>-</p>
+                <input type="text" id="pointTwoDist" class="input_box" placeholder="Point Two ex. (3, 0)">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="distance()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Midpoint Calculator</b></p>
+                <p>-</p>
+                <input type="text" id="pointOneMidp" class="input_box" placeholder="Point One: ex. (0, 0)">
+                <p>-</p>
+                <input type="text" id="pointTwoMidp" class="input_box" placeholder="Point Two ex. (3, 0)">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="midpoint()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Line Partion Calculator</b></p>
+                <p>-</p>
+                <input type="text" id="pointOneRatp" class="input_box" placeholder="Point One: ex. (0, 0)">
+                <p></p>
+                <input type="text" id="pointTwoRatp" class="input_box" placeholder="Point Two ex. (3, 0)">
+                <p>-</p>
+                <input type="text" id="ratioPart" class="input_box" placeholder="Ratio ex. 3:2">
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="partition()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Endpoint from Ratio</b></p>
+                <p>-</p>
+                <input type="text" id="pointOneEndRat" class="input_box" placeholder="Point One: ex. (0, 0)">
+                <p></p>
+                <input type="text" id="pointTwoEndRat" class="input_box" placeholder="Partition Point ex. (3, 0)">
+                <p>-</p>
+                <input type="text" id="ratioEndRat" class="input_box" placeholder="Ratio ex. 3:2">
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="getEndpointFromRatio()">
+            </form>
+        </div>
+    </div>
+    <div style="display:inline-flex;">
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Linear Equation Solver</b></p>
+                <p>-</p>
+                <input type="text" id="equation" class="input_box" placeholder="Equation ex. 3x=3">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="solveEquation()">
+            </form>
+        </div>
+
+    </div>
+</body>
