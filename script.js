@@ -25,7 +25,7 @@ function midpoint()
     let x2 = point2.slice(1, -1).split(',')[0]
     let y2 = point2.slice(1, -1).split(',')[1]
 
-    let midpoint = "(" + ((x2 - x1) / 2) + ", " + ((y2 - y1) / 2) + ")"
+    let midpoint = "(" + ((x2 + x1) / 2) + ", " + ((y2 + y1) / 2) + ")"
 
     document.getElementById("result").value = midpoint
 }
