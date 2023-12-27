@@ -79,6 +79,7 @@ body {
     background-color: rgb(255, 247, 0);
     cursor: pointer;
     font-size: 20px;
+    color: black;
 }
 #submit-button:hover {
     background-color: rgb(255, 250, 114);
