@@ -11,6 +11,7 @@ async function setInputExtraLis(url)
             var li = document.createElement("li");
             var a = document.createElement("a");
             a.appendChild(document.createTextNode(data["results"][i]["name"]));
+            a.setAttribute('id', 'extra-param-li')
             a.href = 'DnDIData.html?apipath=' + searchParams.get('search') + "/" + data["results"][i]["name"].toLowerCase()
             li.appendChild(a)
             ul.appendChild(li);

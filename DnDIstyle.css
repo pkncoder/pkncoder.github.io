@@ -20,7 +20,6 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 #navbar-item a:hover {
     background-color: #344596;
 }
@@ -93,6 +92,10 @@ body {
     border-radius: 15px;
     outline: auto #1e1e1e;
     overflow: scroll;
+}
+#extra-param-li {
+    color: rgb(153, 215, 18);
+    font-size: 20px;
 }
 #data-div {
     font-size: 18px;
