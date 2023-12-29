@@ -22,7 +22,7 @@ async function setInputExtraLis(url)
 function setupInputPage() {
     document.getElementById("data-input-box").placeholder = "Input " + searchParams.get('search');
     
-    setInputExtraLis('https://www.dnd5eapi.co/api/' + searchParams.get('search'));
+    setInputExtraLis('https://www.dnd5eapi.co/api/' + formatForApi(searchParams.get('search')));
 }
 
 function searchForUrl() {
