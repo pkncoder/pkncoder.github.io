@@ -22,7 +22,7 @@ async function setInputExtraLis(url)
 function setupInputPage() {
     document.getElementById("data-input-box").placeholder = "Input " + searchParams.get('search');
     
-    setInputExtraLis('https://www.dnd5eapi.co/api/' + formatForApi(searchParams.get('search')));
+    setInputExtraLis('https://www.dnd5eapi.co/api/' + searchParams.get('search'));
 }
 
 function searchForUrl() {
@@ -43,7 +43,7 @@ function formatForApi(unformattedString) {
     unformattedString = unformattedString.replace(', +1, +2, or +3', '').replace(', +1', '-1').replace(', +2', '-2').replace(', +3', '-3')
     unformattedString = unformattedString.replace(' × ', 'x').replace('(', '').replace(')', '').replaceAll(' ft.', '')
     unformattedString = unformattedString.replace(',', '').replace(' form', '').replace("'", '')
-    unformattedString = unformattedString.replaceAll(':', '').replace('/','-')
+    unformattedString = unformattedString.replace(':', '')
     let formattedString = unformattedString.replaceAll(' ', '-')
     return formattedString
 }
