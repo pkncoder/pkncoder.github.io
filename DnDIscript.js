@@ -44,6 +44,25 @@ function formatForApi(unformattedString) {
     unformattedString = unformattedString.replace(' × ', 'x').replace('(', '').replace(')', '').replaceAll(' ft.', '')
     unformattedString = unformattedString.replace(',', '').replace(' form', '').replace("'", '')
     unformattedString = unformattedString.replace(':', '')
+    try{
+        if (unformattedString.match(/\//g).length > 1)
+        {
+            console.log('pass')
+            let firstSpot = unformattedString.indexOf('/')
+
+            let partTwo = unformattedString.substring(firstSpot + 1)
+
+            partTwo = partTwo.replace('/', '-')
+
+            unformattedString = unformattedString.substring(0, firstSpot + 1) + partTwo
+        }
+    }
+
+    catch (err)
+    {
+        
+    }
+
     let formattedString = unformattedString.replaceAll(' ', '-')
     return formattedString
 }
