@@ -47,7 +47,6 @@ function formatForApi(unformattedString) {
     try{
         if (unformattedString.match(/\//g).length > 1)
         {
-            console.log('pass')
             let firstSpot = unformattedString.indexOf('/')
 
             let partTwo = unformattedString.substring(firstSpot + 1)
