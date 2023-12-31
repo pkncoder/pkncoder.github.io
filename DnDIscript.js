@@ -33,7 +33,19 @@ function getData() {
     fetch('https://www.dnd5eapi.co/api/' + formatForApi(searchParams.get('apipath')))
     .then(response => response.json())
     .then(data => {
-        document.getElementById('dataResultP').innerHTML = JSON.stringify(data, null, 2);
+        let dataResultArea = document.getElementById('dataResultPre')
+        let keys = Object.keys(data)
+
+        for (let i = 0; i < Object.keys(data).length; i++)
+        {
+            let p = document.createElement('p')
+
+            let text = document.createTextNode("  " + keys[i].charAt(0).toUpperCase() + keys[i].slice(1) + ": " + JSON.stringify(data[keys[i]], null, 2))
+
+            p.appendChild(text)
+
+            dataResultArea.appendChild(p)
+        }
     })
 }
 
