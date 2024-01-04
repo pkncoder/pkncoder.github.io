@@ -1,0 +1,82 @@
+body {
+    background-color: rgba(99, 216, 206, 0.617);
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #343ae98c;
+    outline: auto #1e1e1e;
+}
+
+.navbar_item {
+    float: left;
+}
+
+.navbar_item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_item a:hover {
+    background-color: #344596;
+}
+
+
+.form-div {
+    height: calc(100vh / 10);
+    width: 100vw;
+    background-color: #343ae98c;
+    border-radius: 15px;
+    outline: auto #1e1e1e;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#submit-button {
+    height: calc(100vh / 15);
+    border: none;
+    font-size: 24px;
+    border-radius: 10px;
+    color: black;
+    background-color: yellow;
+}
+
+#submit-button:hover {
+    background-color: #245025;
+}
+
+.input-box {
+    height: calc(100vh / 15);
+    width: calc(97% - 100px - 10px);
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+}
+
+.input-box:focus {
+    border: 3px solid rgb(133, 133, 133);
+}
+
+.picker-div {
+    background-color: #343ae98c;
+    border-radius: 15px;
+    outline: auto black;
+    height: calc(100vh / 1.5);
+    font-size: 18px;
+}
+
+.data-div {
+    background-color: #343ae98c;
+    border-radius: 15px;
+    outline: auto black;
+    height: calc(100vh / 1.2);
+    font-size: 18px;
+}
