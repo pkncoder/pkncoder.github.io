@@ -96,5 +96,12 @@ body {
     width: 300px; margin: 10px;
     text-align: center;
     border-radius: 25px;
-    height: 320px;
+    height: 340px;
+}
+
+#big_calc_div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
 }
