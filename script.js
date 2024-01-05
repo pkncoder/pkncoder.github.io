@@ -139,3 +139,13 @@ function pythagLL () {
 
     document.getElementById("result").value = ans
 }
+
+function pythagHL () {
+    let hype = document.getElementById("distOneHypPyHL").value;
+
+    let leg = document.getElementById("distTwoLegPyHL").value;
+
+    let ans = Math.sqrt((hype**2 - leg**2))
+
+    document.getElementById("result").value = ans
+}
