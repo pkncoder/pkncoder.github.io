@@ -10,7 +10,7 @@
     <title>Calculator</title>
 </head>
 
-<body>
+<body onload="setupEventListener()">
     <button id="back-home-button" onclick="location.href = './index.html'">Back to Mainpage</button>
     <div id="main_div">
         <div id="calculator_holder">
@@ -35,7 +35,7 @@
                 <button onclick="clearDisplay()" id="opporator">C</button>
                 <button onclick='appendToDisplay("\(")'>(</button>
                 <button onclick='appendToDisplay("\)")'>)</button>
-                <button onclick="solve('=')">=</button>
+                <button id="equals" onclick="solve('=')">=</button>
             </div>
         </div>
 
