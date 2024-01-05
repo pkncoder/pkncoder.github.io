@@ -21,3 +21,9 @@ function solve () {
 
     document.getElementById("display").value = "  " + eval(document.getElementById("display").value);
 }
+
+function clearCache () {
+    let ul = document.getElementById('cache-ul');
+
+    ul.innerHTML = ''
+}

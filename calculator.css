@@ -45,6 +45,7 @@ body {
     border-radius: 50px;
     overflow: hidden;
     background-color: rgb(64, 64, 64);
+    overflow: scroll;
 }
 
 #cache-ul {
@@ -90,4 +91,14 @@ button:hover {
 
 button:active {
     background-color: hsl(0, 0%, 66%);
+}
+
+.cache-clear {
+    border-radius: 0px;
+    width: 500px;
+    height: 100px;
+    background-color: hsl(0, 0%, 30%);
+    border: none;
+    color: white;
+    font-size: 30px;
 }
