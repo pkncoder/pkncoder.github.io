@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DnDIstyle.css"></link>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Search</title>
+    <nav>
+        <ul id="navbar-head">
+            <li id="navbar-item"><a href="/DnDIHome.html">Home</a></li>
+            <li class="dropdown" id="dropdown-li">
+                <a href="javascript:void(0)" class="dropbtn" id="dropdown-title-a">Main Use Querries</a>
+                <div class="dropdown-content">
+                    <a href="DnDIInput.html?search=damage-types" id="dropdown-content-a">Damage Types</a>
+                    <a href="DnDIInput.html?search=magic-items" id="dropdown-content-a">Magic Items</a>
+                    <a href="DnDIInput.html?search=monsters" id="dropdown-content-a">Monsters</a>
+                    <a href="DnDIInput.html?search=proficiencies" id="dropdown-content-a">Proficiencies</a>
+                    <a href="DnDIInput.html?search=races" id="dropdown-content-a">Races</a>
+                    <a href="DnDIInput.html?search=skills" id="dropdown-content-a">Skills</a>
+                    <a href="DnDIInput.html?search=spells" id="dropdown-content-a">Spells</a>
+                </div>
+            </li>
+            <li class="dropdown" id="dropdown-li">
+                <a href="javascript:void(0)" class="dropbtn" id="dropdown-title-a">Sub-Used Querries</a>
+                <div class="dropdown-content">
+                    <a href="DnDIInput.html?search=ability-scores" id="dropdown-content-a">Ability Scores</a>
+                    <a href="DnDIInput.html?search=alignments" id="dropdown-content-a">Alignments</a>
+                    <a href="DnDIInput.html?search=classes" id="dropdown-content-a">Classes</a>
+                    <a href="DnDIInput.html?search=conditions" id="dropdown-content-a">Conditions</a>
+                    <a href="DnDIInput.html?search=equipment" id="dropdown-content-a">Equipment</a>
+                    <a href="DnDIInput.html?search=languages" id="dropdown-content-a">Languages</a>
+                    <a href="DnDIInput.html?search=magic-schools" id="dropdown-content-a">Magic Schools</a>
+                    <a href="DnDIInput.html?search=subclasses" id="dropdown-content-a">Subclasses</a>
+                    <a href="DnDIInput.html?search=subraces" id="dropdown-content-a">Sub Races</a>
+                </div>
+            </li>
+            <li class="dropdown" id="dropdown-li">
+                <a href="javascript:void(0)" class="dropbtn" id="dropdown-title-a">Small Data Querries</a>
+                <div class="dropdown-content">
+                    <a href="DnDIInput.html?search=backgrounds" id="dropdown-content-a">Backgrounds</a>
+                    <a href="DnDIInput.html?search=feats" id="dropdown-content-a">Feats</a>
+                </div>
+            </li>
+            <li class="dropdown" id="dropdown-li">
+                <a href="javascript:void(0)" class="dropbtn" id="dropdown-title-a">Advanced Querries</a>
+                <div class="dropdown-content">
+                    <a href="DnDIInput.html?search=features" id="dropdown-content-a">Features</a>
+                    <a href="DnDIInput.html?search=rule-sections" id="dropdown-content-a">Rule Sections</a>
+                    <a href="DnDIInput.html?search=rules" id="dropdown-content-a">Rules</a>
+                    <a href="DnDIInput.html?search=traits" id="dropdown-content-a">Traits</a>
+                </div>
+            </li>
+            <li id="navbar-item"><a href="/index.html">Back to Main Page</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <br>
+    <div id="input-div">
+        <input type="text" id="data-input-box" placeholder="Url (Ex. spells/fireball)">
+        <button type="submit" text="submit" id="submit-button" onclick="searchForCustomUrl()">Submit</button>
+    </div>
+    <br>
+    <div id="extra-links-div">
+        <ul id="data-holder">
+
+        </ul>
+    </div>
+
+
+    <script src="DnDIscript.js"></script>
+</body>
+</html>
