@@ -129,3 +129,13 @@ function solveEquation()
     let ans = -(total / coeff);
     document.getElementById("result").value = "X = " + ans
 }
+
+function pythagLL () {
+    let distOne = document.getElementById("distOnePyLL").value;
+
+    let distTwo = document.getElementById("distTwoPyLL").value;
+
+    let ans = Math.sqrt((distOne**2 + distTwo**2))
+
+    document.getElementById("result").value = ans
+}
