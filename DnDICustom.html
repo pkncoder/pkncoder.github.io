@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="DnDIstyle.css"></link>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>DnD Infinity Home</title>
+    <title>Search</title>
     <nav>
         <ul id="navbar-head">
             <li id="navbar-item"><a href="/DnDIHome.html">Home</a></li>
@@ -49,7 +49,6 @@
                     <a href="DnDIInput.html?search=rule-sections" id="dropdown-content-a">Rule Sections</a>
                     <a href="DnDIInput.html?search=rules" id="dropdown-content-a">Rules</a>
                     <a href="DnDIInput.html?search=traits" id="dropdown-content-a">Traits</a>
-                    <a href="DnDICustom.html" id="dropdown-content-a">Custom Url</a>
                 </div>
             </li>
             <li id="navbar-item"><a href="/index.html">Back to Main Page</a></li>
@@ -58,30 +57,18 @@
 </head>
 <body>
     <br>
-    <div id="home-welcome">
-        <br>
-        <h1>Welcome to dndinfinity</h1>
-        <p>This is an interactive site that can show stats for monsters, spells, classes, etc.</p>
-        <br>
-        <br>
-        <h2>Info about this site</h2>
-        <p>Some spells, monsters, classes, etc will not show up.</p>
-        <p>I apologize as this data is not accessable due to the only avalible data is the free rulebook, a.k.a. the DnD SRD.</p>
-        <p>This is still in development, and will not be done for a while (meant to keep me busy).</p>
-        <br>
-        <br>
-        <h3>Extra bugs</h3>
-        <p>There are some bugs that will happen</p>
-        <p>One notable one is the data not showing up from formatting issues when data is requested from the API</p>
-        <p>There may or may not still be more formatting errors, however most if not all are taken care of</p>
-        <p>If any extra bugs are found then please report them to <a href="https://github.com/pkncoder/pkncoder.github.io/issues">https://github.com/pkncoder/pkncoder.github.io/issues</a></p>
-        <br>
-        <h1>Api data</h1>
-        <p>This site uses the DnD 5th Edition Api</p>
-        <p>Link to their site: <a href="https://www.dnd5eapi.co">https://www.dnd5eapi.co</a></p>
-        <p>If this goes down then indeed some things won't work</p>
-        <p>Thanks to the developers of DnD 5th Edition Api for letting people like me to be able to utilize it</p>
-        <br>
+    <div id="input-div">
+        <input type="text" id="data-input-box" placeholder="Url (Ex. spells/fireball)">
+        <button type="submit" text="submit" id="submit-button" onclick="searchForCustomUrl()">Submit</button>
     </div>
+    <br>
+    <div id="extra-links-div">
+        <ul id="data-holder">
+
+        </ul>
+    </div>
+
+
+    <script src="DnDIscript.js"></script>
 </body>
 </html>

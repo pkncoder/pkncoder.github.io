@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button id="back-home-button" onclick="location.href = './index.html'">Back to Mainpage</button>
     <div id="main_div">
         <div id="calculator_holder">
             <input type="text" id="display" value="  ">
@@ -31,11 +32,18 @@
                 <button onclick="appendToDisplay('.')">.</button>
                 <button onclick="appendToDisplay('0')">0</button>
                 <button onclick="appendToDisplay('**')">^</button>
-                <button onclick="clearDisplay()" id="opporator">CA</button>
+                <button onclick="clearDisplay()" id="opporator">C</button>
                 <button onclick='appendToDisplay("\(")'>(</button>
                 <button onclick='appendToDisplay("\)")'>)</button>
                 <button onclick="solve('=')">=</button>
             </div>
+        </div>
+
+        <div id="answer_cache">
+            <button class="cache-clear" onclick="clearCache()">Clear Cache</button>
+            <ul id="cache-ul">
+
+            </ul>
         </div>
     </div>
 </body>
