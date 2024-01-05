@@ -16,7 +16,6 @@ async function setInputExtraLis(url)
             ul.appendChild(li);
         }
     })
-    
 }
 
 function setupInputPage() {
@@ -76,4 +75,8 @@ function formatForApi(unformattedString) {
 
     let formattedString = unformattedString.replaceAll(' ', '-')
     return formattedString
+}
+
+function searchForCustomUrl () {
+    window.location.href = 'DnDIData.html?apipath=' + document.getElementById('data-input-box').value
 }
