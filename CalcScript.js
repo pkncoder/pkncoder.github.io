@@ -2,30 +2,8 @@ const display = document.getElementById("display");
 
 let extrasShown = false;
 
-let closerNum = 0;
-
 function appendToDisplay (item) {
     document.getElementById("display").value += item;
-
-    if (item === 'sqrt(')
-    {
-        closerNum++;
-    }
-
-    else if (item == 'cos(')
-    {
-        closerNum++;
-    }
-
-    else if (item == 'sin(')
-    {
-        closerNum++;
-    }
-
-    else if (item == 'tan(')
-    {
-        closerNum++;
-    }
 }
 
 function clearDisplay () {
@@ -36,7 +14,7 @@ function solve () {
     let ul = document.getElementById("cache-ul");
     let li = document.createElement('li');
 
-    let text = document.createTextNode(document.getElementById("display").value + ')'.repeat(closerNum) + " = " + eval('with (Math) ' + document.getElementById("display").value + ')'.repeat(closerNum)))
+    let text = document.createTextNode(document.getElementById("display").value + " = " + eval('with (Math) ' + document.getElementById("display").value))
 
     li.appendChild(text);
     li.classList.add('cached-item')
