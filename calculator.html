@@ -6,13 +6,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="calculator.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="CalcScript.js"></script>
+    <script src="CalcScript.js" charset="UTF-8"></script>
     <title>Calculator</title>
 </head>
 
 <body onload="setupEventListener()">
     <button id="back-home-button" onclick="location.href = './index.html'">Back to Mainpage</button>
     <div id="main_div">
+        <div id="extras_holder">
+            <div id="extra_keys">
+                <button onclick="appendToDisplay('**')">^</button>
+                <button onclick="appendToDisplay('sqrt\(')">√</button>
+                <button onclick="appendToDisplay('cos\(')">cos</button>
+                <button onclick="appendToDisplay('sin\(')">sin</button>
+                <button onclick="appendToDisplay('tans\(')">tan</button>
+            </div>
+        </div>
         <div id="calculator_holder">
             <input type="text" id="display" value="  ">
             <div id="keys">
@@ -31,8 +40,8 @@
                 <button onclick="appendToDisplay('/')" id="opporator">/</button>
                 <button onclick="appendToDisplay('.')">.</button>
                 <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('**')">^</button>
-                <button onclick="clearDisplay()" id="opporator">C</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="largenCalc()" id="opporator">&harr;</button>
                 <button onclick='appendToDisplay("\(")'>(</button>
                 <button onclick='appendToDisplay("\)")'>)</button>
                 <button id="equals" onclick="solve('=')">=</button>
