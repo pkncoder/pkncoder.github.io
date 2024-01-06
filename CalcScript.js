@@ -12,7 +12,7 @@ function solve () {
     let ul = document.getElementById("cache-ul");
     let li = document.createElement('li');
 
-    let text = document.createTextNode(document.getElementById("display").value + " = " + eval(document.getElementById("display").value))
+    let text = document.createTextNode(document.getElementById("display").value + " = " + eval('with (Math) ' + document.getElementById("display").value))
 
     li.appendChild(text);
     li.classList.add('cached-item')
