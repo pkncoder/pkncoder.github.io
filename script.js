@@ -179,13 +179,27 @@ function finalTimePhys () {
 
     let distance = document.getElementById("finTimCalcDistancePhysI").value;
 
-    const acel = -10;
+    const acel = -9.81;
 
     let a = -1 * ((acel/2));
     let b = -1 * startVel;
     let c = distance;
 
     let ans = ((-1 * b) + Math.sqrt(((b**2) - (4 * a * c)))) / (2 * a);
+
+    document.getElementById("result").value = ans;
+}
+
+function xDistPhysII () {
+    let startVel = document.getElementById("xDistTravCalcVelXPhysII").value;
+
+    let startDist = document.getElementById("xDistTravCalcInitDistancePhysII").value;
+
+    const acel = -9.81;
+
+    let time = Math.sqrt(((startDist * 2) / acel));
+
+    let ans = startVel * time
 
     document.getElementById("result").value = ans;
 }
