@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <nav>
+        <ul class="navbar">
+            <li class="navbar_item"><a href="/index.html">Home</a></li>
+            <li class="dropdown" id="dropdown-li">
+                <a href="javascript:void(0)" class="dropbtn" id="dropdown-title-a">Calculators</a>
+                <div class="dropdown-content">
+                    <a href="/EquationCalcs.html" id="dropdown-content-a">Equation Calcs</a>
+                    <a href="/PhysicsCalcs.html" id="dropdown-content-a">Physics Calcs</a>
+                    <a href="/calculator.html" id="dropdown-content-a">Calculator</a>
+                </div>
+            </li>
+            <li class="navbar_item"><a href="/DnDIHome.html">DnD Infinity</a></li>
+            <li class="navbar_item"><a href="/ESHome.html">Element Search</a></li>
+        </ul>
+    </nav>
+    <title>Calculators</title>
+</head>
+
+<body>
+    <br>
+    <input id="result" style="border: solid 3px grey; border-radius: 15px; height: 40px; margin: 10px; text-align: center" value="Answer Box">
+    <br>
+    <div id="big_calc_div">
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Distance 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="distCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 0">
+                <br>
+                <p>-</p>
+                <input type="text" id="distCalcVelIIPhysI" class="input_box" placeholder="Ending Vel ex. -100">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="distanceOnePhys()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Final Vel 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="finVelCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 30">
+                <br>
+                <p>-</p>
+                <input type="text" id="finVelCalcDistancePhysI" class="input_box" placeholder="Distance ex. 500">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="finalVelPhys()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Final Time 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="finTimCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 30">
+                <br>
+                <p>-</p>
+                <input type="text" id="finTimCalcDistancePhysI" class="input_box" placeholder="Distance ex. 500">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="finalTimePhys()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>X Dist Traveled 2D Calc</b></p>
+                <p>Note: Imagine a ball rolling off a table</p>
+                <input type="text" id="xDistTravCalcVelXPhysII" class="input_box" placeholder="Starting Vel. ex. 5">
+                <br>
+                <p>-</p>
+                <input type="text" id="xDistTravCalcInitDistancePhysII" class="input_box" placeholder="Initial Distance ex. -30">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="xDistPhysII()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>X Dist Traveled 2D Calc</b></p>
+                <p style="padding: 5px;">Note: Imagine a ball launching from ground and ending on ground</p>
+                <input type="text" id="xDistTravVCalcVelyPhysII" class="input_box" placeholder="Starting Vel. ex. 10">
+                <br>
+                <p>-</p>
+                <input type="text" id="xDistTravVCalcInitAnglePhysII" class="input_box" placeholder="Angle Shot at ex. 30">
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="xDistYVelPhysII()">
+            </form>
+        </div>
+
+    </div>
+</body>
