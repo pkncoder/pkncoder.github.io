@@ -199,7 +199,29 @@ function xDistPhysII () {
 
     let time = Math.sqrt(((startDist * 2) / acel));
 
-    let ans = startVel * time
+    let ans = startVel * time;
 
     document.getElementById("result").value = ans;
+}
+
+function xDistYVelPhysII () {
+    let startVel = document.getElementById("xDistTravVCalcVelyPhysII").value;
+
+    let theta = document.getElementById("xDistTravVCalcInitAnglePhysII").value;
+    var pi = Math.PI;
+    theta *= (pi/180);
+
+    const g = -9.81;
+
+    let Vy = startVel * Math.sin(theta);
+
+    let Vx = startVel * Math.cos(theta);
+
+    let ChangeVy = (Vy * -1) - Vy;
+
+    let time = ChangeVy / g
+
+    let ans = Vx * time
+
+    document.getElementById("result").value = ans
 }
