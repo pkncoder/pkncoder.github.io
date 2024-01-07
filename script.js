@@ -145,7 +145,47 @@ function pythagHL () {
 
     let leg = document.getElementById("distTwoLegPyHL").value;
 
-    let ans = Math.sqrt((hype**2 - leg**2))
+    let ans = Math.sqrt((hype**2 - leg**2));
 
-    document.getElementById("result").value = ans
+    document.getElementById("result").value = ans;
+}
+
+function distanceOnePhys () {
+    let startVel = document.getElementById("distCalcVelIPhysI").value;
+
+    let endVel = document.getElementById("distCalcVelIIPhysI").value;
+
+    const a = -9.81;
+
+    let ans = ((endVel**2 - startVel**2)/(a * 2));
+
+    document.getElementById("result").value = ans;
+}
+
+function finalVelPhys () {
+    let startVel = document.getElementById("finVelCalcVelIPhysI").value;
+
+    let distance = document.getElementById("finVelCalcDistancePhysI").value;
+
+    const a = -9.81;
+
+    let ans = Math.sqrt((startVel**2 + 2 * a * distance));
+
+    document.getElementById("result").value = ans;
+}
+
+function finalTimePhys () {
+    let startVel = document.getElementById("finTimCalcVelIPhysI").value;
+
+    let distance = document.getElementById("finTimCalcDistancePhysI").value;
+
+    const acel = -10;
+
+    let a = -1 * ((acel/2));
+    let b = -1 * startVel;
+    let c = distance;
+
+    let ans = ((-1 * b) + Math.sqrt(((b**2) - (4 * a * c)))) / (2 * a);
+
+    document.getElementById("result").value = ans;
 }

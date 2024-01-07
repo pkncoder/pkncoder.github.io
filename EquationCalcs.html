@@ -136,5 +136,53 @@
             </form>
         </div>
 
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Distance 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="distCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 0">
+                <br>
+                <p>-</p>
+                <input type="text" id="distCalcVelIIPhysI" class="input_box" placeholder="Ending Vel ex. -100">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="distanceOnePhys()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Final Vel 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="finVelCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 30">
+                <br>
+                <p>-</p>
+                <input type="text" id="finVelCalcDistancePhysI" class="input_box" placeholder="Distance ex. 500">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="finalVelPhys()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Final Time 1D Calc</b></p>
+                <p>-</p>
+                <input type="text" id="finTimCalcVelIPhysI" class="input_box" placeholder="Starting Vel. ex. 30">
+                <br>
+                <p>-</p>
+                <input type="text" id="finTimCalcDistancePhysI" class="input_box" placeholder="Distance ex. 500">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="finalTimePhys()">
+            </form>
+        </div>
+
     </div>
 </body>
