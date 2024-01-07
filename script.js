@@ -225,3 +225,28 @@ function xDistYVelPhysII () {
 
     document.getElementById("result").value = ans
 }
+
+function xDistTravFPhysII () {
+    let startVel = document.getElementById("xDistTravFVelyPhysII").value;
+
+    let theta = document.getElementById("xDistTravFInitAnglePhysII").value;
+    theta *= (Math.PI/180);
+
+    let Ho = document.getElementById("XDistTravFInitHieghtPhysII").value;
+    let Hf = document.getElementById("XDistTravFInitFinPhysII").value;
+
+    let changeDist = -1 * (Hf - Ho);
+
+    const g = -9.81;
+
+
+    let Vy = startVel * Math.sin(theta);
+
+    let Vx = startVel * Math.cos(theta);
+
+    let time = ((-1 * Vy) - (Math.sqrt((((Vy**2) - (4 * (g / 2) * changeDist)))))) / g;
+
+    let ans = time * Vx;
+
+    document.getElementById("result").value = ans;
+}
