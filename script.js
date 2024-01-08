@@ -19,11 +19,11 @@ function midpoint()
     let point1 = document.getElementById('pointOneMidp').value 
     let point2 = document.getElementById('pointTwoMidp').value
 
-    let x1 = point1.slice(1, -1).split(',')[0]
-    let y1 = point1.slice(1, -1).split(',')[1]
+    let x1 = parseInt(point1.slice(1, -1).split(',')[0])
+    let y1 = parseInt(point1.slice(1, -1).split(',')[1])
 
-    let x2 = point2.slice(1, -1).split(',')[0]
-    let y2 = point2.slice(1, -1).split(',')[1]
+    let x2 = parseInt(point2.slice(1, -1).split(',')[0])
+    let y2 = parseInt(point2.slice(1, -1).split(',')[1])
 
     let midpoint = "(" + ((x2 + x1) / 2) + ", " + ((y2 + y1) / 2) + ")"
 
