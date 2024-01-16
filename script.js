@@ -223,7 +223,7 @@ function xDistYVelPhysII () {
 
     let ans = Vx * time
 
-    document.getElementById("result").value = ans
+    document.getElementById("result").value = ans;
 }
 
 function xDistTravFPhysII () {

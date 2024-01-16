@@ -8,20 +8,20 @@
     <title>Input Page</title>
     <nav>
         <ul class="navbar">
-            <li class="navbar_item"><a href="/ESHome.html">Home</a></li>
-            <li class="navbar_item"><a href="/">Back to Maipage</a></li>
-            <li class="navbar_item"><a href="/ESInput.html?search_with=name">Search With Name</a></li>
-            <li class="navbar_item"><a href="/ESInput.html?search_with=protons">Search With Protons</a></li>
-            <li class="navbar_item"><a href="/ESInput.html?search_with=symbol">Search With Symbol</a></li>
+            <li class="navbar_item"><a href="./ESHome.html">Home</a></li>
+            <li class="navbar_item"><a href="./">Back to Maipage</a></li>
+            <li class="navbar_item"><a href="./ESInput.html?search_with=name">Search With Name</a></li>
+            <li class="navbar_item"><a href="./ESInput.html?search_with=protons">Search With Protons</a></li>
+            <li class="navbar_item"><a href="./ESInput.html?search_with=symbol">Search With Symbol</a></li>
         </ul>
     </nav>
 </head>
-<body>
+<body onload="setupInputPage()">
     <br>
     <div class="form-div">
-        <form action="">
-            <input type="text" class="input-box">
-            <button type="submit" id="submit-button"><b>Submit</b></button>
+        <form onsubmit="return false">
+            <input type="text" class="input-box" id="input" placeholder="">
+            <button type="submit" id="submit-button" onclick="gotoUrl()"><b>Submit</b></button>
         </form>
     </div>
     <br>
