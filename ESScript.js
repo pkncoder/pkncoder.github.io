@@ -61,7 +61,57 @@ function getData() {
                     break
                 }
             }
-            console.log(atomicNum)
+
+            if ((atomicNum + 1) === 2)
+            {
+                valenceElectrons = "2";
+            }
+
+            else if ((parseInt(JSON.stringify(data["data"][atomicNum])) <= 2) || (parseInt(JSON.stringify(data["data"][atomicNum]["xpos"])) >= 13))
+            {
+                valenceElectrons = JSON.stringify(data["data"][atomicNum]["xpos"]) % 10;
+            }
+
+            else
+            {
+                valenceElectrons = "None Spesific";
+            }
+
+            let text = document.createTextNode(
+                "  Name: " + JSON.stringify(data["data"][atomicNum]["name"], null, 2).slice(1, -1) + "\n" +
+                "  Symbol: " + JSON.stringify(data["data"][atomicNum]["symbol"], null, 2).slice(1, -1) + "\n" +
+                "  Atomic Mass: " + JSON.stringify(data["data"][atomicNum]["atomic_mass"], null, 2) + "\n" +
+                "  Density: " + JSON.stringify(data["data"][atomicNum]["density"], null, 2) + "\n" +
+                "  Category: " + JSON.stringify(data["data"][atomicNum]["category"], null, 2).slice(1, -1) + "\n" +
+                "  Phase: " + JSON.stringify(data["data"][atomicNum]["phase"], null, 2).slice(1, -1) + "\n" +
+                "  Atomic Number: " + JSON.stringify(data["data"][atomicNum]["number"], null, 2) + "\n" +
+                "  Period: " + JSON.stringify(data["data"][atomicNum]["period"], null, 2) + "\n" +
+                "  Group: " + JSON.stringify(data["data"][atomicNum]["xpos"], null, 2) + "\n" +
+                "  Valence Electrons: " + valenceElectrons + "\n" +
+                "  Electron Configuration: " + JSON.stringify(data["data"][atomicNum]["electron_configuration"], null, 2).slice(1, -1) + "\n" +
+                "  Shells: " + JSON.stringify(data["data"][atomicNum]["period"], null, 2) + "\n" +
+                "  Melting Point: " + JSON.stringify(data["data"][atomicNum]["melt"], null, 2) + "\n" +
+                "  Boiling Point: " + JSON.stringify(data["data"][atomicNum]["boil"], null, 2) + "\n"
+            )
+
+            p.appendChild(text);
+
+            dataResultArea.appendChild(p);
+        }
+
+        else if (searchParams.has("symbol"))
+        {
+            let atomicNum = 0;
+
+            for (var i = 0; i <= 118; i++)
+            {
+                if (((JSON.stringify(data["data"][i]["symbol"]).slice(1, -1).toUpperCase()) === searchParams.get("symbol")))
+                {
+                    atomicNum = i;
+                    break
+                }
+            }
+            
             if ((atomicNum + 1) === 2)
             {
                 valenceElectrons = "2";
@@ -111,6 +161,11 @@ function setupInputPage()
     else if (searchParams.get("search_with") === "name")
     {
         document.getElementById("input").placeholder = "Any element name. Ex. Helium";
+    }
+
+    else if (searchParams.get("search_with") === "symbol")
+    {
+        document.getElementById("input").placeholder = "Any element symbol. Ex. He"
     }
 }
 
