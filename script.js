@@ -12,6 +12,9 @@ function distance()
     let distance = Math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
     document.getElementById('result').value = distance
+
+    document.getElementById('pointOneDist').value = ""; 
+    document.getElementById('pointTwoDist').value = "";
 }
 
 function midpoint()
@@ -19,15 +22,18 @@ function midpoint()
     let point1 = document.getElementById('pointOneMidp').value 
     let point2 = document.getElementById('pointTwoMidp').value
 
-    let x1 = point1.slice(1, -1).split(',')[0]
-    let y1 = point1.slice(1, -1).split(',')[1]
+    let x1 = parseInt(point1.slice(1, -1).split(',')[0])
+    let y1 = parseInt(point1.slice(1, -1).split(',')[1])
 
-    let x2 = point2.slice(1, -1).split(',')[0]
-    let y2 = point2.slice(1, -1).split(',')[1]
+    let x2 = parseInt(point2.slice(1, -1).split(',')[0])
+    let y2 = parseInt(point2.slice(1, -1).split(',')[1])
 
     let midpoint = "(" + ((x2 + x1) / 2) + ", " + ((y2 + y1) / 2) + ")"
 
     document.getElementById("result").value = midpoint
+
+    document.getElementById('pointOneMidp').value = "";
+    document.getElementById('pointTwoMidp').value = "";
 }
 
 function partition()
@@ -55,6 +61,10 @@ function partition()
 
     // Display to screen
     document.getElementById("result").value = "(" + xAns + ", " + yAns + ")"
+
+    document.getElementById('pointOneRatp').value = "";
+    document.getElementById('pointTwoRatp').value = "";
+    document.getElementById('ratioPart').value = "";
 }
 
 function getEndpointFromRatio()
@@ -82,6 +92,10 @@ function getEndpointFromRatio()
 
     // Display to screen
     document.getElementById("result").value = "(" + xAns + ", " + yAns + ")"
+
+    document.getElementById('pointOneEndRat').value = "";
+    document.getElementById('pointTwoEndRat').value = "";
+    document.getElementById('ratioEndRat').value = "";
 }
 
 function solveEquation()
@@ -128,6 +142,8 @@ function solveEquation()
     // numeric value to right hand side
     let ans = -(total / coeff);
     document.getElementById("result").value = "X = " + ans
+
+    document.getElementById("equation").value = "";
 }
 
 function pythagLL () {
@@ -138,6 +154,9 @@ function pythagLL () {
     let ans = Math.sqrt((distOne**2 + distTwo**2))
 
     document.getElementById("result").value = ans
+
+    document.getElementById("distOnePyLL").value = "";
+    document.getElementById("distTwoPyLL").value = "";
 }
 
 function pythagHL () {
@@ -148,6 +167,9 @@ function pythagHL () {
     let ans = Math.sqrt((hype**2 - leg**2));
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("distOneHypPyHL").value = "";
+    document.getElementById("distTwoLegPyHL").value = "";
 }
 
 function distanceOnePhys () {
@@ -160,6 +182,9 @@ function distanceOnePhys () {
     let ans = ((endVel**2 - startVel**2)/(a * 2));
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("distCalcVelIPhysI").value = "";
+    document.getElementById("distCalcVelIIPhysI").value = "";
 }
 
 function finalVelPhys () {
@@ -172,6 +197,9 @@ function finalVelPhys () {
     let ans = Math.sqrt((startVel**2 + 2 * a * distance));
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("finVelCalcVelIPhysI").value = "";
+    document.getElementById("finVelCalcDistancePhysI").value = "";
 }
 
 function finalTimePhys () {
@@ -188,6 +216,9 @@ function finalTimePhys () {
     let ans = ((-1 * b) + Math.sqrt(((b**2) - (4 * a * c)))) / (2 * a);
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("finTimCalcVelIPhysI").value = "";
+    document.getElementById("finTimCalcDistancePhysI").value = "";
 }
 
 function xDistPhysII () {
@@ -202,6 +233,9 @@ function xDistPhysII () {
     let ans = startVel * time;
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("xDistTravCalcVelXPhysII").value = "";
+    document.getElementById("xDistTravCalcInitDistancePhysII").value = "";
 }
 
 function xDistYVelPhysII () {
@@ -223,7 +257,7 @@ function xDistYVelPhysII () {
 
     let ans = Vx * time
 
-    document.getElementById("result").value = ans;
+    document.getElementById("result").value = ans
 }
 
 function xDistTravFPhysII () {
@@ -249,4 +283,9 @@ function xDistTravFPhysII () {
     let ans = time * Vx;
 
     document.getElementById("result").value = ans;
+
+    document.getElementById("xDistTravFVelyPhysII").value = "";
+    document.getElementById("xDistTravFInitAnglePhysII").value = "";
+    document.getElementById("XDistTravFInitHieghtPhysII").value = "";
+    document.getElementById("XDistTravFInitFinPhysII").value = "";
 }
