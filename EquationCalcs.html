@@ -26,7 +26,7 @@
 
 <body>
     <br>
-    <input id="result" style="border: solid 3px grey; border-radius: 15px; height: 40px; margin: 10px; text-align: center" value="Answer Box">
+    <input id="result" style="border: solid 3px grey; border-radius: 15px; height: 40px; margin: 10px; text-align: center; width: 500px;" value="Answer Box">
     <br>
     <div id="big_calc_div">
         <div class="calculator_div">
@@ -41,6 +41,37 @@
                 <br>
                 <br>
                 <input type="submit" text="submit" id="submit_button" onclick="distance()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Triangle Calculator</b></p>
+                <p>-</p>
+                <input type="text" id="pointATri" class="input_box" placeholder="Point A ex. (0, 0)">
+                <p></p>
+                <input type="text" id="pointBTri" class="input_box" placeholder="Point B ex. (0, 3)">
+                <p></p>
+                <input type="text" id="pointCTri" class="input_box" placeholder="Point C ex. (3, 0)">
+                <p>-</p>
+                <input type="submit" text="submit" id="submit_button" onclick="distanceTri()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Quad Calculator</b></p>
+                <p>-</p>
+                <input type="text" id="pointAQuad" class="input_box" placeholder="Point A ex. (0, 0)">
+                <p></p>
+                <input type="text" id="pointBQuad" class="input_box" placeholder="Point B ex. (0, 3)">
+                <p></p>
+                <input type="text" id="pointCQuad" class="input_box" placeholder="Point C ex. (3, 0)">
+                <p></p>
+                <input type="text" id="pointDQuad" class="input_box" placeholder="Point D ex. (3, 3)">
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="distanceQuad()">
             </form>
         </div>
 

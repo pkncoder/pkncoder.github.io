@@ -17,6 +17,69 @@ function distance()
     document.getElementById('pointTwoDist').value = "";
 }
 
+function distanceTri()
+{
+    let a = document.getElementById('pointATri').value;
+    let b = document.getElementById('pointBTri').value;
+    let c = document.getElementById('pointCTri').value;
+    
+    let ax = a.slice(1, -1).split(',')[0];
+    let ay = a.slice(1, -1).split(',')[1];
+
+    let bx = b.slice(1, -1).split(',')[0];
+    let by = b.slice(1, -1).split(',')[1];
+
+    let cx = c.slice(1, -1).split(',')[0];
+    let cy = c.slice(1, -1).split(',')[1];
+
+    let ab = Math.sqrt((bx - ax)**2 + (by - ay)**2)
+
+    let bc = Math.sqrt((cx - bx)**2 + (cy - by)**2)
+
+    let ac = Math.sqrt((cx - ax)**2 + (cy - ay)**2)
+
+    document.getElementById('result').value = "AB: " + ab.toFixed(3) + " | BC: " + bc.toFixed(3) + " | AC: " + ac.toFixed(3) + " | Per. " + (ab+bc+ac).toFixed(3);
+
+    document.getElementById('pointATri').value = "";
+    document.getElementById('pointBTri').value = "";
+    document.getElementById('pointCTri').value = "";
+}
+
+function distanceQuad()
+{
+    let a = document.getElementById('pointAQuad').value;
+    let b = document.getElementById('pointBQuad').value;
+    let c = document.getElementById('pointCQuad').value;
+    let d = document.getElementById('pointDQuad').value;
+
+    let ax = a.slice(1, -1).split(',')[0];
+    let ay = a.slice(1, -1).split(',')[1];
+
+    let bx = b.slice(1, -1).split(',')[0];
+    let by = b.slice(1, -1).split(',')[1];
+
+    let cx = c.slice(1, -1).split(',')[0];
+    let cy = c.slice(1, -1).split(',')[1];
+
+    let dx = d.slice(1, -1).split(',')[0];
+    let dy = d.slice(1, -1).split(',')[1];
+
+    let ab = Math.sqrt((bx - ax)**2 + (by - ay)**2)
+
+    let bc = Math.sqrt((cx - bx)**2 + (cy - by)**2)
+
+    let cd = Math.sqrt((dx - cx)**2 + (dy - cy)**2)
+
+    let ad = Math.sqrt((dx - ax)**2 + (dy - ay)**2)
+
+    document.getElementById('result').value = "AB: " + ab.toFixed(3) + " | BC: " + bc.toFixed(3) + " | CD: " + cd.toFixed(3) + " | AD: " + ad.toFixed(3) + " | Per. " + (ab+bc+cd+ad).toFixed(3);
+
+    document.getElementById('pointAQuad').value = "";
+    document.getElementById('pointBQuad').value = "";
+    document.getElementById('pointCQuad').value = "";
+    document.getElementById('pointDQuad').value = "";
+}
+
 function midpoint()
 {
     let point1 = document.getElementById('pointOneMidp').value 
