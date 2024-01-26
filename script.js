@@ -11,7 +11,7 @@ function distance()
 
     let distance = Math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
-    document.getElementById('result').value = distance
+    document.getElementById('result').value = distance.toFixed(3) + " | √" + (distance**2).toFixed(3);
 
     document.getElementById('pointOneDist').value = ""; 
     document.getElementById('pointTwoDist').value = "";
@@ -77,7 +77,7 @@ function distanceQuad()
     document.getElementById('pointAQuad').value = "";
     document.getElementById('pointBQuad').value = "";
     document.getElementById('pointCQuad').value = "";
-    document.getElementById('pointDQuad').value = "";
+    document.getElementById('pointDQuad').value = "" ;
 }
 
 function midpoint()
