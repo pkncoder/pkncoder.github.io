@@ -80,6 +80,41 @@ function distanceQuad()
     document.getElementById('pointDQuad').value = "" ;
 }
 
+function checkForLinCongr()
+{
+    let pointA1 = document.getElementById("pointALine1LinCheck").value;
+    let pointB1 = document.getElementById("pointBLine1LinCheck").value;
+
+    let pointA2 = document.getElementById("pointALine2LinCheck").value;
+    let pointB2 = document.getElementById("pointBLine2LinCheck").value;
+
+    let ax1 = pointA1.slice(1, -1).split(',')[0];
+    let ay1 = pointA1.slice(1, -1).split(',')[1];
+
+    let bx1 = pointB1.slice(1, -1).split(',')[0];
+    let by1 = pointB1.slice(1, -1).split(',')[1];
+    
+    let ax2 = pointA2.slice(1, -1).split(',')[0];
+    let ay2 = pointA2.slice(1, -1).split(',')[1];
+
+    let bx2 = pointB2.slice(1, -1).split(',')[0];
+    let by2 = pointB2.slice(1, -1).split(',')[1];
+
+    let AB1 = Math.sqrt((bx1 - ax1)**2 + (by1 - ay1)**2);
+
+    let AB2 = Math.sqrt((bx2 - ax2)**2 + (by2 - ay2)**2);
+
+    if (AB1 === AB2)
+    {
+        document.getElementById('result').value = "Congruent";
+    }
+
+    else
+    {
+        document.getElementById('result').value = "Not Congruent";
+    }
+}
+
 function midpoint()
 {
     let point1 = document.getElementById('pointOneMidp').value 

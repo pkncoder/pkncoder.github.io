@@ -77,6 +77,23 @@
 
         <div class="calculator_div">
             <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Linear Congruence Checker</b></p>
+                <p>-</p>
+                <input type="text" id="pointALine1LinCheck" class="input_box" placeholder="Start Point Line 1">
+                <p></p>
+                <input type="text" id="pointBLine1LinCheck" class="input_box" placeholder="End Point Line 1">
+                <p></p>
+                <input type="text" id="pointALine2LinCheck" class="input_box" placeholder="Start Point Line 2">
+                <p></p>
+                <input type="text" id="pointBLine2LinCheck" class="input_box" placeholder="Guess Point Line 2">
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="checkForLinCongr()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
                 <p style="font-size: 20px; color: black; text-decoration: none;"><b>Midpoint Calculator</b></p>
                 <p>-</p>
                 <input type="text" id="pointOneMidp" class="input_box" placeholder="Point One: ex. (0, 0)">
