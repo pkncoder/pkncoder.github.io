@@ -35,6 +35,7 @@ for i in range(119):
                               "period": jsonData[i]["period"],
                               "group": jsonData[i]["xpos"],
                               "valence-electrons": valenceElectrons,
+                              "electron-configuration": jsonData[i]["electron_configuration"],
                               "shells": jsonData[i]["period"],
                               "melt-point": jsonData[i]["melt"],
                               "boil-point": jsonData[i]["boil"]}]

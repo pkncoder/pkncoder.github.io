@@ -1,4 +1,4 @@
-{
+const data = {
     "count": 119,
     "results": [
         {
@@ -1906,4 +1906,37 @@
             "boil-point": 630
         }
     ]
+}
+
+const searchPerams = new URLSearchParams(window.location.search);
+
+function getData()
+{
+    let dataResultArea = document.getElementById('dataResultPre')
+
+    let p = document.createElement('p')
+
+    if (searchPerams.has("protons"))
+    {
+        let text = document.createTextNode(
+            "  Name: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["name"] + "\n" +
+            "  Symbol: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["symbol"] + "\n" +
+            "  Atomic Mass: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["atomic-mass"] + "\n" +
+            "  Density: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["density"] + "\n" +
+            "  Category: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["category"] + "\n" +
+            "  Phase: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["phase"] + "\n" +
+            "  Atomic Number: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["atomic-num"] + "\n" +
+            "  Period: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["period"] + "\n" +
+            "  Group: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["group"] + "\n" +
+            "  Valence Electrons: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["valence-electrons"] + "\n" +
+            "  Electron Configuration: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["electron-configuration"] + "\n" +
+            "  Shells: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["shells"] + "\n" +
+            "  Melting Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["melt"] + "\n" +
+            "  Boiling Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["boil"] + "\n"
+            );
+
+        p.appendChild(text);
+
+        dataResultArea.appendChild(p);
+    }
 }
