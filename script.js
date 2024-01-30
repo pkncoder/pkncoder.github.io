@@ -387,3 +387,31 @@ function xDistTravFPhysII () {
     document.getElementById("XDistTravFInitHieghtPhysII").value = "";
     document.getElementById("XDistTravFInitFinPhysII").value = "";
 }
+
+function basicPECalc()
+{
+    const g = 9.8;
+
+    let mass = document.getElementById("basicPEMass").value;
+    let height = document.getElementById("basicPEInitHieght").value;
+
+    let ans = mass * g * height;
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicPEMass").value = "";
+    document.getElementById("basicPEInitHieght").value = "";
+}
+
+function basicKECalc()
+{
+    let mass = document.getElementById("basicKEMass").value;
+    let initVel = document.getElementById("basicKEInitVel").value;
+
+    let ans = 1/2 * mass * initVel**2;
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicKEMass").value = "";
+    document.getElementById("basicKEInitVel").value = "";
+}

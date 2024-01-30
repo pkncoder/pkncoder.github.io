@@ -125,5 +125,35 @@
             </form>
         </div>
 
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Basic PE Calc</b></p>
+                <p>-</p>
+                <input type="text" id="basicPEMass" class="input_box" placeholder="Mass of the object ex. 20">
+                <p>-</p>
+                <input type="text" id="basicPEInitHieght" class="input_box" placeholder="Initial Height ex. 10">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="basicPECalc()">
+            </form>
+        </div>
+
+        <div class="calculator_div">
+            <form onsubmit="return false">
+                <p style="font-size: 20px; color: black; text-decoration: none;"><b>Basic KE Calc</b></p>
+                <p>-</p>
+                <input type="text" id="basicKEMass" class="input_box" placeholder="Mass of the object ex. 20">
+                <p>-</p>
+                <input type="text" id="basicKEInitVel" class="input_box" placeholder="Initial Velocity ex. 2">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" text="submit" id="submit_button" onclick="basicKECalc()">
+            </form>
+        </div>
+
     </div>
 </body>
