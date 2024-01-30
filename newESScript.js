@@ -1916,8 +1916,6 @@ function getData()
 
     let p = document.createElement('p')
 
-    if (searchPerams.has("protons"))
-    {
         let text = document.createTextNode(
             "  Name: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["name"] + "\n" +
             "  Symbol: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["symbol"] + "\n" +
@@ -1931,12 +1929,12 @@ function getData()
             "  Valence Electrons: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["valence-electrons"] + "\n" +
             "  Electron Configuration: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["electron-configuration"] + "\n" +
             "  Shells: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["shells"] + "\n" +
-            "  Melting Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["melt"] + "\n" +
-            "  Boiling Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["boil"] + "\n"
+            "  Melting Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["melt-point"] + "\n" +
+            "  Boiling Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["boil-point"] + "\n"
             );
 
         p.appendChild(text);
 
         dataResultArea.appendChild(p);
-    }
+    
 }
