@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="newCalculator.js" charset="UTF-8"></script>
+    <title>Calculator</title>
+</head>
+
+<body onload="setupEventListener()">
+    <button id="back-home-button" onclick="location.href = './index.html'">Back to Mainpage</button>
+    <div id="main_div">
+        <div id="extras_holder">
+            <div id="extra_keys">
+                
+                <button id="extra_key" onclick="appendToDisplay('sqrt\(')">√</button>
+                <button id="extra_key" onclick="appendToDisplay('**')">^</button>
+                <button id="extra_key" onclick="appendToDisplay('acos\(')">acos</button>
+                <button id="extra_key" onclick="appendToDisplay('cos\(')">cos</button>
+                <button id="extra_key" onclick="appendToDisplay('asin\(')">asin</button>
+                <button id="extra_key" onclick="appendToDisplay('sin\(')">sin</button>
+                <button id="extra_key" onclick="appendToDisplay('atan\(')">atan</button>
+                <button id="extra_key" onclick="appendToDisplay('tan\(')">tan</button>
+                
+                
+                
+            </div>
+        </div>
+        <div id="calculator_holder">
+            <input type="text" id="display" value="  ">
+            <div id="keys">
+                <button onclick="appendToDisplay('+')" id="opporator">+</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')" id="opporator">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')" id="opporator">*</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')" id="opporator">/</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="largenCalc()" id="opporator">&harr;</button>
+                <button onclick='appendToDisplay("\(")'>(</button>
+                <button onclick='appendToDisplay("\)")'>)</button>
+                <button id="equals" onclick="newSolve()">=</button>
+            </div>
+        </div>
+
+        <div id="answer_cache">
+            <button class="cache-clear" onclick="clearCache()">Clear Cache</button>
+            <ul id="cache-ul">
+
+            </ul>
+        </div>
+    </div>
+</body>
