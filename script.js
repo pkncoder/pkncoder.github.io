@@ -415,3 +415,16 @@ function basicKECalc()
     document.getElementById("basicKEMass").value = "";
     document.getElementById("basicKEInitVel").value = "";
 }
+
+function basicVelCalc()
+{
+    let objMass = document.getElementById("basicVelMass").value;
+    let KE = document.getElementById("basicVelKE").value;
+
+    let ans = Math.sqrt((2*KE/objMass));
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicVelMass").value = "";
+    document.getElementById("basicVelKE").value = "";
+}
