@@ -425,6 +425,19 @@ function basicVelCalc()
 
     document.getElementById("result").value = ans;
 
-    document.getElementById("basicVelMass").value = "";
+    document.getElementById("basicMassKEVel").value = "";
     document.getElementById("basicVelKE").value = "";
+}
+
+function basicMassKECalc()
+{
+    let vel = document.getElementById("basicMassKEVel").value;
+    let KE = document.getElementById("basicMass2KE").value;
+
+    let ans = ((2 * KE) / (vel**2))
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicMassKEVel").value = "";
+    document.getElementById("basicMass2KE").value = "";
 }
