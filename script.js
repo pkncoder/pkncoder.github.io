@@ -403,6 +403,36 @@ function basicPECalc()
     document.getElementById("basicPEInitHieght").value = "";
 }
 
+function basicHieghtCalc()
+{
+    let mass = document.getElementById("basicHieghtMass").value;
+    let PE = document.getElementById("basicHieghtPE").value;
+
+    const g = 9.8;
+
+    let ans = PE / (mass * g);
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicHieghtMass").value = "";
+    document.getElementById("basicHieghtPE").value = "";
+}
+
+function basicMassPECalc()
+{
+    let height = document.getElementById("basicMassPEHieght").value;
+    let PE = document.getElementById("basicMass2PE").value;
+
+    const g = 9.8;
+
+    let ans = PE / (height * g);
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicMassPEHieght").value = "";
+    document.getElementById("basicMass2PE").value = "";
+}
+
 function basicKECalc()
 {
     let mass = document.getElementById("basicKEMass").value;
