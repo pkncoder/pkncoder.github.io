@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="calculator.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="CalcScript.js" charset="UTF-8"></script>
+    <script src="newCalculator.js" charset="UTF-8"></script>
     <title>Calculator</title>
 </head>
 
@@ -17,7 +17,7 @@
             <div id="extra_keys">
                 
                 <button id="extra_key" onclick="appendToDisplay('sqrt\(')">√</button>
-                <button id="extra_key" onclick="appendToDisplay('**')">^</button>
+                <button id="extra_key" onclick="appendToDisplay('^')">^</button>
                 <button id="extra_key" onclick="appendToDisplay('acos\(')">acos</button>
                 <button id="extra_key" onclick="appendToDisplay('cos\(')">cos</button>
                 <button id="extra_key" onclick="appendToDisplay('asin\(')">asin</button>
@@ -40,7 +40,7 @@
                 <button onclick="appendToDisplay('4')">4</button>
                 <button onclick="appendToDisplay('5')">5</button>
                 <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('*')" id="opporator">*</button>
+                <button onclick="appendToDisplay('^')" id="opporator">*</button>
                 <button onclick="appendToDisplay('7')">7</button>
                 <button onclick="appendToDisplay('8')">8</button>
                 <button onclick="appendToDisplay('9')">9</button>
@@ -51,7 +51,7 @@
                 <button onclick="largenCalc()" id="opporator">&harr;</button>
                 <button onclick='appendToDisplay("\(")'>(</button>
                 <button onclick='appendToDisplay("\)")'>)</button>
-                <button id="equals" onclick="solve('=')">=</button>
+                <button id="equals" onclick="newSolve()">=</button>
             </div>
         </div>
 
