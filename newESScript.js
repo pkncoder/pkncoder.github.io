@@ -1915,26 +1915,96 @@ function getData()
     let dataResultArea = document.getElementById('dataResultPre')
 
     let p = document.createElement('p')
-
+    
+    if (searchPerams.has("protons"))
+    {
         let text = document.createTextNode(
-            "  Name: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["name"] + "\n" +
-            "  Symbol: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["symbol"] + "\n" +
-            "  Atomic Mass: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["atomic-mass"] + "\n" +
-            "  Density: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["density"] + "\n" +
-            "  Category: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["category"] + "\n" +
-            "  Phase: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["phase"] + "\n" +
-            "  Atomic Number: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["atomic-num"] + "\n" +
-            "  Period: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["period"] + "\n" +
-            "  Group: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["group"] + "\n" +
-            "  Valence Electrons: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["valence-electrons"] + "\n" +
-            "  Electron Configuration: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["electron-configuration"] + "\n" +
-            "  Shells: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["shells"] + "\n" +
-            "  Melting Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["melt-point"] + "\n" +
-            "  Boiling Point: " + data["data"][parseInt(searchPerams.get("protons")) - 1]["boil-point"] + "\n"
+            "  Name: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["name"] + "\n" +
+            "  Symbol: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["symbol"] + "\n" +
+            "  Atomic Mass: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["atomic-mass"] + "\n" +
+            "  Density: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["density"] + "\n" +
+            "  Category: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["category"] + "\n" +
+            "  Phase: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["phase"] + "\n" +
+            "  Atomic Number: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["atomic-num"] + "\n" +
+            "  Period: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["period"] + "\n" +
+            "  Group: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["group"] + "\n" +
+            "  Valence Electrons: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["valence-electrons"] + "\n" +
+            "  Electron Configuration: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["electron-configuration"] + "\n" +
+            "  Shells: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["shells"] + "\n" +
+            "  Melting Point: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["melt-point"] + "\n" +
+            "  Boiling Point: " + data["results"][parseInt(searchPerams.get("protons")) - 1]["boil-point"] + "\n"
             );
 
         p.appendChild(text);
 
         dataResultArea.appendChild(p);
-    
+    }
+
+    else if (searchPerams.has("name"))
+    {
+        let atomic_num = 0;
+
+        for (var i = 0; i < parseInt(data["count"]); i++)
+        {
+            if (data["results"][i]["name"].toUpperCase() === searchPerams.get("name").toUpperCase())
+            {
+                atomic_num = i;
+            }
+        }
+
+        let text = document.createTextNode(
+            "  Name: " + data["results"][atomic_num]["name"] + "\n" +
+            "  Symbol: " + data["results"][atomic_num]["symbol"] + "\n" +
+            "  Atomic Mass: " + data["results"][atomic_num]["atomic-mass"] + "\n" +
+            "  Density: " + data["results"][atomic_num]["density"] + "\n" +
+            "  Category: " + data["results"][atomic_num]["category"] + "\n" +
+            "  Phase: " + data["results"][atomic_num]["phase"] + "\n" +
+            "  Atomic Number: " + data["results"][atomic_num]["atomic-num"] + "\n" +
+            "  Period: " + data["results"][atomic_num]["period"] + "\n" +
+            "  Group: " + data["results"][atomic_num]["group"] + "\n" +
+            "  Valence Electrons: " + data["results"][atomic_num]["valence-electrons"] + "\n" +
+            "  Electron Configuration: " + data["results"][atomic_num]["electron-configuration"] + "\n" +
+            "  Shells: " + data["results"][atomic_num]["shells"] + "\n" +
+            "  Melting Point: " + data["results"][atomic_num]["melt-point"] + "\n" +
+            "  Boiling Point: " + data["results"][atomic_num]["boil-point"] + "\n"
+            );
+
+        p.appendChild(text);
+
+        dataResultArea.appendChild(p);
+    }
+
+    else if (searchPerams.has("symbol"))
+    {
+        let atomic_num = 0;
+
+        for (var i = 0; i < parseInt(data["count"]); i++)
+        {
+            if (data["results"][i]["symbol"].toUpperCase() === searchPerams.get("symbol").toUpperCase())
+            {
+                atomic_num = i;
+            }
+        }
+
+        let text = document.createTextNode(
+            "  Name: " + data["results"][atomic_num]["name"] + "\n" +
+            "  Symbol: " + data["results"][atomic_num]["symbol"] + "\n" +
+            "  Atomic Mass: " + data["results"][atomic_num]["atomic-mass"] + "\n" +
+            "  Density: " + data["results"][atomic_num]["density"] + "\n" +
+            "  Category: " + data["results"][atomic_num]["category"] + "\n" +
+            "  Phase: " + data["results"][atomic_num]["phase"] + "\n" +
+            "  Atomic Number: " + data["results"][atomic_num]["atomic-num"] + "\n" +
+            "  Period: " + data["results"][atomic_num]["period"] + "\n" +
+            "  Group: " + data["results"][atomic_num]["group"] + "\n" +
+            "  Valence Electrons: " + data["results"][atomic_num]["valence-electrons"] + "\n" +
+            "  Electron Configuration: " + data["results"][atomic_num]["electron-configuration"] + "\n" +
+            "  Shells: " + data["results"][atomic_num]["shells"] + "\n" +
+            "  Melting Point: " + data["results"][atomic_num]["melt-point"] + "\n" +
+            "  Boiling Point: " + data["results"][atomic_num]["boil-point"] + "\n"
+            );
+
+        p.appendChild(text);
+
+        dataResultArea.appendChild(p);
+    }
 }
