@@ -270,6 +270,24 @@ function pythagHL () {
     document.getElementById("distTwoLegPyHL").value = "";
 }
 
+function rateOfChange()
+{
+    let p1 = document.getElementById("pointOneRateChange").value;
+
+    let p2 = document.getElementById("pointTwoRateChange").value;
+
+    let x1 = parseInt(p1.slice(1, -1).split(',')[0])
+    let y1 = parseInt(p1.slice(1, -1).split(',')[1])
+    
+    let x2 = parseInt(p2.slice(1, -1).split(',')[0])
+    let y2 = parseInt(p2.slice(1, -1).split(',')[1])
+
+    xAns = x2 - x1;
+    yAns = y2 - y1;
+
+    document.getElementById("result").value = yAns + "/" + xAns;
+}
+
 function distanceOnePhys () {
     let startVel = document.getElementById("distCalcVelIPhysI").value;
 
