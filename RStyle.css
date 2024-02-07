@@ -9,10 +9,11 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(53, 14, 88);
+    background-color: rgb(44, 44, 44);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    margin-top: calc(100vh / 10);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -84,7 +85,7 @@ body {
 }
 
 .navbar_item {
-    float: right;
+    float: left;
 }
 
 .navbar_item a {
@@ -111,7 +112,6 @@ body {
 }
 #dropdown-li.dropdown {
     display: inline-block;
-    float: right;
 }
 .dropdown-content {
     display: none;
