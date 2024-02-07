@@ -84,7 +84,7 @@ body {
 }
 
 .navbar_item {
-    float: left;
+    float: right;
 }
 
 .navbar_item a {
@@ -111,6 +111,7 @@ body {
 }
 #dropdown-li.dropdown {
     display: inline-block;
+    float: right;
 }
 .dropdown-content {
     display: none;
