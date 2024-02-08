@@ -303,6 +303,15 @@ function rateOfChange()
     document.getElementById("pointTwoRateChange").value = ""
 }
 
+function getArithmiticSequence()
+{
+    
+}
+
+
+
+
+
 function distanceOnePhys () {
     let startVel = document.getElementById("distCalcVelIPhysI").value;
 
