@@ -305,9 +305,45 @@ function rateOfChange()
 
 function getArithmiticSequence()
 {
-    
+    let numOne = parseInt(document.getElementById("numOneArthSequence").value);
+    let numTwo = parseInt(document.getElementById("numTwoArthSequence").value);
+    let numThree = parseInt(document.getElementById("numThreeArthSequence").value);
+
+    let rateCheckOne = numOne - numTwo;
+    let rateCheckTwo = numTwo - numThree;
+
+    if (rateCheckOne === rateCheckTwo)
+    {
+        document.getElementById("result").value = "y = " + -rateCheckOne + "x + " + numOne + " or " +
+        -rateCheckOne + "n + " + (numOne + (-rateCheckOne * -1)) + " (nth term equation)";
+    }
+
+    else
+    {
+        document.getElementById("result").value = "Not an arithmitic sequence.";
+    }
 }
 
+function getGeometricSequence()
+{
+    let numOne = parseInt(document.getElementById("numOneGeoequence").value);
+    let numTwo = parseInt(document.getElementById("numTwoGeoSequence").value);
+    let numThree = parseInt(document.getElementById("numThreeGeoSequence").value);
+
+    let rateCheckOne = numOne / numTwo;
+    let rateCheckTwo = numTwo / numThree;
+    let rateCheckThree = numOne / numThree
+
+    if (rateCheckOne === rateCheckTwo && rateCheckTwo === rateCheckThree)
+    {
+        document.getElementById("result").value = e;
+    }
+
+    else
+    {
+        document.getElementById("result").value = "Not a geometric sequence.";
+    }
+}
 
 
 
