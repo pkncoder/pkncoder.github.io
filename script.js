@@ -273,7 +273,6 @@ function pythagHL () {
 function rateOfChange()
 {
     let p1 = document.getElementById("pointOneRateChange").value;
-
     let p2 = document.getElementById("pointTwoRateChange").value;
 
     let x1 = parseInt(p1.slice(1, -1).split(',')[0])
@@ -285,7 +284,23 @@ function rateOfChange()
     xAns = x2 - x1;
     yAns = y2 - y1;
 
-    document.getElementById("result").value = yAns + "/" + xAns;
+    if (xAns === 0)
+    {
+        document.getElementById("result").value = "Undifiened";
+    }
+
+    else if (yAns === 0)
+    {
+        document.getElementById("result").value = 0;
+    }
+
+    else
+    {
+        document.getElementById("result").value = yAns + "/" + xAns;
+    }
+
+    document.getElementById("pointOneRateChange").value = "";
+    document.getElementById("pointTwoRateChange").value = ""
 }
 
 function distanceOnePhys () {
