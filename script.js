@@ -326,17 +326,16 @@ function getArithmiticSequence()
 
 function getGeometricSequence()
 {
-    let numOne = parseInt(document.getElementById("numOneGeoequence").value);
+    let numOne = parseInt(document.getElementById("numOneGeoSequence").value);
     let numTwo = parseInt(document.getElementById("numTwoGeoSequence").value);
     let numThree = parseInt(document.getElementById("numThreeGeoSequence").value);
 
-    let rateCheckOne = numOne / numTwo;
-    let rateCheckTwo = numTwo / numThree;
-    let rateCheckThree = numOne / numThree
+    let rateCheckOne = numTwo / numOne;
+    let rateCheckTwo = numThree / numTwo;
 
-    if (rateCheckOne === rateCheckTwo && rateCheckTwo === rateCheckThree)
+    if (rateCheckOne === rateCheckTwo)
     {
-        document.getElementById("result").value = e;
+        document.getElementById("result").value = numOne + " * " + rateCheckOne + "^(n-1)";
     }
 
     else
