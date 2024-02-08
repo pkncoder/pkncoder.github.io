@@ -322,6 +322,10 @@ function getArithmiticSequence()
     {
         document.getElementById("result").value = "Not an arithmitic sequence.";
     }
+
+    document.getElementById("numOneArthSequence").value = "";
+    document.getElementById("numTwoArthSequence").value = "";
+    document.getElementById("numThreeArthSequence").value = "";
 }
 
 function getGeometricSequence()
@@ -342,6 +346,10 @@ function getGeometricSequence()
     {
         document.getElementById("result").value = "Not a geometric sequence.";
     }
+
+    document.getElementById("numOneGeoSequence").value = "";
+    document.getElementById("numTwoGeoSequence").value = "";
+    document.getElementById("numThreeGeoSequence").value = "";
 }
 
 
