@@ -532,7 +532,7 @@ function basicVelCalc()
 
     document.getElementById("result").value = ans;
 
-    document.getElementById("basicMassKEVel").value = "";
+    document.getElementById("basicVelMass").value = "";
     document.getElementById("basicVelKE").value = "";
 }
 
