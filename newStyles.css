@@ -97,6 +97,8 @@ table {
 }
 
 td {
+    padding-top: 10px;
+    padding-bottom: 10px;
     outline: solid black 3px;
     width: 33%
 }
