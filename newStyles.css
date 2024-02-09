@@ -14,6 +14,8 @@ body {
     padding: 40px;
     border: solid black 8px;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 nav {
@@ -81,4 +83,20 @@ head {
 .dropdown-content #dropdown-content-a:hover {background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content {
    display: block;
+}
+
+
+
+table {
+    text-align: center; 
+    outline: solid black 2px; 
+    width: 70%; 
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+td {
+    outline: solid black 3px;
+    width: 33%
 }
