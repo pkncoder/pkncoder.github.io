@@ -68,7 +68,7 @@ body {
 
 .item {
     position: initial;
-    border: solid black 2px;
+    border: solid white 2px;
     height: 200px;
     width: 100%;
     border-radius: 22px;
@@ -77,10 +77,13 @@ body {
     align-items: center;
     overflow: hidden;
     transition: transform .2s;
+    box-shadow: 4px 4px 4px 4px rgb(75, 75, 75);
+    z-index: 0;
 }
 
 .item:hover {
     transform: scale(1.2);
+    z-index: 2;
 }
 
 .image-caption {
