@@ -93,6 +93,9 @@ function generateButtonFunctionter()
     // The function name
     let onActivateFunc = document.getElementById("functionOnOnFuncer").value;
 
+    // On press perams (when actuvated)
+    let onTruePerams = document.getElementById("onPressEventPeramsFuncer").value;
+
     // On press or on hold
     let pressOrHold = document.getElementById("eventFuncer").value;
 
@@ -101,6 +104,9 @@ function generateButtonFunctionter()
 
     // The name of the on false function
     let onFalseFuncName = document.getElementById("onFalseEventNameFuncer").value;
+
+    // On false press perams
+    let onFalsePerams = document.getElementById("onFalseEventPeramsFuncer").value;
     
     // This is our final code line
     let code = "";
@@ -118,14 +124,14 @@ function generateButtonFunctionter()
     // If its on press, do dat
     if (pressOrHold === "press")
     {  
-        code += "onTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "()))";
+        code += "onTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "(" + onTruePerams + ")))";
     }
 
     // Else, if we are making an on hold, just change the 'onTrue' to 'whileTrue'
     // Prob a more efficient way, but this is my site, and there are no more ppl, so shut up
     else if (pressOrHold === "hold")
     {
-        code += "whileTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "()))";
+        code += "whileTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "(" + onTruePerams +")))";
     }
 
 
@@ -140,7 +146,7 @@ function generateButtonFunctionter()
     else
     {
         // Add the on flase thing, isn't too hard
-        code += ".onFalse(new InstantCommand(() -> " + functionConnection + "." + onFalseFuncName + "()));";
+        code += ".onFalse(new InstantCommand(() -> " + functionConnection + "." + onFalseFuncName + "(" + onFalsePerams + ")));";
     }
 
     // This is the same as the return line in our function
