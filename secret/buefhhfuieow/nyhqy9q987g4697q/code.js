@@ -1,8 +1,8 @@
 function generateButtonMap()
 {
     let controller = document.getElementById("controllerButton").value;
-    let varName = document.getElementById("varNameButton").value;
-    let button = document.getElementById("buttonButton").value;
+    let varName = document.getElementById("varName").value;
+    let button = document.getElementById("button").value;
 
     button = button.toUpperCase()
 
@@ -99,11 +99,50 @@ function generateButtonFunctionter()
     // The var name of your connectoin to your Mechanizms class
     let functionConnection = document.getElementById("functionConnectionLineFuncer").value;
 
-    // On false event or no?
-    let onFalse = document.getElementById("onFalseEventFuncer").value;
-
     // The name of the on false function
     let onFalseFuncName = document.getElementById("onFalseEventNameFuncer").value;
+    
+    // This is our final code line
+    let code = "";
+
+    // Also lowercase the foolean values
+    pressOrHold = pressOrHold.toLowerCase();
 
 
+
+    // Start adding everything we need
+    // This is the stuff we know that we need to add
+    code += buttonName + ".";
+
+    // Next test for if we will use on true or not (then add the rest we need)
+    // If its on press, do dat
+    if (pressOrHold === "press")
+    {  
+        code += "onTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "()))";
+    }
+
+    // Else, if we are making an on hold, just change the 'onTrue' to 'whileTrue'
+    // Prob a more efficient way, but this is my site, and there are no more ppl, so shut up
+    else if (pressOrHold === "hold")
+    {
+        code += "whileTrue(new InstantCommand(() -> " + functionConnection + "." + onActivateFunc + "()))";
+    }
+
+
+
+    // Test to see if the on false func name has somthing, if it does then add the on flase stuff, if not then
+    if (onFalseFuncName === "")
+    {
+        code += ";";
+    }
+
+    // If it is however,
+    else
+    {
+        // Add the on flase thing, isn't too hard
+        code += ".onFalse(new InstantCommand(() -> " + functionConnection + "." + onFalseFuncName + "()));";
+    }
+
+    // This is the same as the return line in our function
+    document.getElementById("result").value = code;
 }
