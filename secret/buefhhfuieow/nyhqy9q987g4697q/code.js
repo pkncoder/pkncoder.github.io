@@ -83,3 +83,27 @@ function generatePOVMap()
 
     document.getElementById("result").value = "private final POVButton " + varName + " = new POVButton(" + controller + ", " + pov + ");";
 }
+
+function generateButtonFunctionter()
+{
+    // Input vales
+    // The var name of the button
+    let buttonName = document.getElementById("buttonNameFuncer").value;
+
+    // The function name
+    let onActivateFunc = document.getElementById("functionOnOnFuncer").value;
+
+    // On press or on hold
+    let pressOrHold = document.getElementById("eventFuncer").value;
+
+    // The var name of your connectoin to your Mechanizms class
+    let functionConnection = document.getElementById("functionConnectionLineFuncer").value;
+
+    // On false event or no?
+    let onFalse = document.getElementById("onFalseEventFuncer").value;
+
+    // The name of the on false function
+    let onFalseFuncName = document.getElementById("onFalseEventNameFuncer").value;
+
+
+}
