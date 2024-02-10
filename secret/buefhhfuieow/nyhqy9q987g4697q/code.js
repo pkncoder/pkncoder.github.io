@@ -1,8 +1,8 @@
 function generateButtonMap()
 {
-    let controller = document.getElementById("controller").value;
-    let varName = document.getElementById("varName").value;
-    let button = document.getElementById("button").value;
+    let controller = document.getElementById("controllerButton").value;
+    let varName = document.getElementById("varNameButton").value;
+    let button = document.getElementById("buttonButton").value;
 
     button = button.toUpperCase()
 
@@ -51,4 +51,35 @@ function generateButtonMap()
     }
 
     document.getElementById("result").value = "private final JoystickButton " + varName + " = new JoysickButton(" + controller + ", " + button + ");";
+}
+
+function generatePOVMap()
+{
+    let controller = document.getElementById("controllerPOV").value;
+    let varName = document.getElementById("varNamePOV").value;
+    let pov = document.getElementById("povPOV").value;
+
+    pov = pov.toUpperCase();
+
+    if (pov === "UP")
+    {
+        pov = 0;
+    }
+
+    else if (pov === "RIGHT")
+    {
+        pov = 90;
+    }
+
+    else if (pov === "DOWN")
+    {
+        pov = 180;
+    }
+
+    else if (pov === "LEFT")
+    {
+        pov = 270;
+    }
+
+    document.getElementById("result").value = "private final POVButton " + varName + " = new POVButton(" + controller + ", " + pov + ");";
 }
