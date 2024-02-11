@@ -1,0 +1,107 @@
+body {
+    background-color: rgba(99, 216, 206, 0.617);;
+}
+
+
+
+.calculator-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    position: initial;
+}
+
+.button-holder {
+    margin-top: auto;
+    margin-bottom: 5%;
+
+    outline: auto;
+
+    width: 90%;
+    height: 20%;
+
+    outline: none;
+}
+
+
+
+
+#extras-div {
+    height: 78%;
+    width: 78%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        
+    background-color: rgb(253, 194, 99);
+    border-radius: 100px;
+
+    visibility: hidden;
+
+    position: fixed;
+}
+
+
+#calculator {
+    border: solid #04AA6D 2px; 
+    margin: 10px;
+    text-align: center;
+    border-radius: 25px;
+    height: 50vh;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-button {
+    width: 50%;
+    height: 100%;
+
+    border: none;
+    background-color: rgb(10, 228, 61);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+
+    &:hover {
+        background-color: rgb(10, 190, 61);
+        transition-duration: .2s;
+    }
+
+    &:active {
+        background-color: rgb(10, 150, 81);
+        transition-duration: .2s;
+    }
+
+}
+
+.submit-button {
+    float: left;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.expand-button {
+    float: right;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+#close-button {
+    margin: 40px; 
+    float: right; 
+    border: none;
+    font-size: 28px;
+    background: none;
+}
