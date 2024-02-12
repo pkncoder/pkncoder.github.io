@@ -12,7 +12,7 @@
         <title>Home</title>
     </head>
     <body onload="expandDiv(); setupEventListeners()">
-        <div id="extras-div">
+        <div id="extras-div-one" class="extra-divs">
             <div id="inner-holder">
                 <div class="left-column">
                     <input type="text" class="input-extras">
@@ -29,12 +29,81 @@
                 </div>
                 <div class="right-column">
                     <input type="text" id="code-result-box">
-                    <button id="extra-submit-box" class="extra-close-button" onclick="expandDiv()">Close</button>
+                    <button id="extra-submit-box" class="extra-close-button" onclick="expandDiv(1)">Close</button>
                     <button id="extra-submit-box" class="extra-submit-button">Submit</button>
                 </div>
             </div>
         </div>
-            
+
+        <div id="extras-div-two" class="extra-divs">
+            <div id="inner-holder">
+                <div class="left-column">
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                </div>
+                <div class="right-column">
+                    <input type="text" id="code-result-box">
+                    <button id="extra-submit-box" class="extra-close-button" onclick="expandDiv(2)">Calc2</button>
+                    <button id="extra-submit-box" class="extra-submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="extras-div-three" class="extra-divs">
+            <div id="inner-holder">
+                <div class="left-column">
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                </div>
+                <div class="right-column">
+                    <input type="text" id="code-result-box">
+                    <button id="extra-submit-box" class="extra-close-button" onclick="expandDiv(3)">Calc3</button>
+                    <button id="extra-submit-box" class="extra-submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="extras-div-four" class="extra-divs">
+            <div id="inner-holder">
+                <div class="left-column">
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                    <br>
+                    <input type="text" class="input-extras">
+                </div>
+                <div class="right-column">
+                    <input type="text" id="code-result-box">
+                    <button id="extra-submit-box" class="extra-close-button" onclick="expandDiv(4)">Calc4</button>
+                    <button id="extra-submit-box" class="extra-submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+
         <div class="calculator-holder">
 
             <div id="calculator">
@@ -42,22 +111,43 @@
                 <div class="button-holder">
 
                     <button type="submit" class="submit-button calculator-button">Submit</button>
-                    <button class="expand-button calculator-button" onclick="expandDiv()">Expand</button>
+                    <button class="expand-button calculator-button" onclick="expandDiv(1)">Expand</button>
 
                 </div>
 
             </div>
 
-            <div class="calculator">
-                
+            <div id="calculator">
+
+                <div class="button-holder">
+
+                    <button type="submit" class="submit-button calculator-button">Submit</button>
+                    <button class="expand-button calculator-button" onclick="expandDiv(2)">Expand</button>
+
+                </div>
+
             </div>
 
-            <div class="calculator">
-                
+            <div id="calculator">
+
+                <div class="button-holder">
+
+                    <button type="submit" class="submit-button calculator-button">Submit</button>
+                    <button class="expand-button calculator-button" onclick="expandDiv(3)">Expand</button>
+
+                </div>
+
             </div>
 
-            <div class="calculator">
-                
+            <div id="calculator">
+
+                <div class="button-holder">
+
+                    <button type="submit" class="submit-button calculator-button">Submit</button>
+                    <button class="expand-button calculator-button" onclick="expandDiv(4)">Expand</button>
+
+                </div>
+
             </div>
 
         </div>
