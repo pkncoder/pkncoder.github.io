@@ -88,6 +88,8 @@ body {
     font-size: 24px;
     text-align: center;
 
+    transition-duration: .2s;
+
     &:hover {
         background-color: rgb(10, 190, 61);
         transition-duration: .2s;
@@ -107,6 +109,8 @@ body {
 
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
+    border-right: solid green 2px;
 }
 
 .expand-button {
@@ -118,15 +122,6 @@ body {
 
 
 
-
-
-#close-button {
-    margin: 40px; 
-    float: right; 
-    border: none;
-    font-size: 28px;
-    background: none;
-}
 
 .input-extras {
     width: 100%;
