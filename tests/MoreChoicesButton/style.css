@@ -50,7 +50,7 @@ body {
     .left-column {   
         float: left;
 
-        width: 25%;
+        width: 40%;
         height: 100%;
     }
       
@@ -58,11 +58,10 @@ body {
     .right-column {
         float: right;
 
-        width: 70%;
+        width: 57%;
         height: 100%;
     }
 }
-
 
 #calculator {
     border: solid #04AA6D 2px; 
@@ -127,4 +126,31 @@ body {
     border: none;
     font-size: 28px;
     background: none;
+}
+
+.input-extras {
+    width: 100%;
+    height: calc(100% / 6);
+
+    border: none;
+    font-size: 36px;
+
+    background-color: rgb(255, 85, 0);
+}
+
+#code-result-box {
+    float: right;
+
+    width: 100%;
+    height: 10%;
+
+    background-color: rgba(5, 5, 23, 0.8);
+    color: white;
+    font-size: 24px;
+
+    overflow-x: scroll;
+
+    border-radius: 10px;
+    outline: none;
+    border: none;
 }
