@@ -5,11 +5,13 @@ function expandDiv()
     if (div.style.visibility === "hidden")
     {
         div.style.visibility = "visible";
+        div.style.transform = "translate(-50%, -50%)"
     }
 
     else
     {
         div.style.visibility = "hidden";
+        div.style.transform = "translate(-50%, -200%)"
     }
 }
 

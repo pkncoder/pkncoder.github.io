@@ -29,8 +29,10 @@ body {
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-        
+
+    transform: translate(-50%, -200%);
+    transition-duration: 1s;
+    
     background-color: rgb(255, 106, 0);
     border-radius: 10px;
 
@@ -51,7 +53,7 @@ body {
         width: 25%;
         height: 100%;
 
-        outline: solid black 2px;
+        outline: dashed black 3px;
     }
       
     /* Right column */
@@ -95,6 +97,8 @@ body {
     &:hover {
         background-color: rgb(10, 190, 61);
         transition-duration: .2s;
+
+        cursor: pointer;
     }
 
     &:active {
