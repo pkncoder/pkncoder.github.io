@@ -52,8 +52,6 @@ body {
 
         width: 25%;
         height: 100%;
-
-        outline: dashed black 3px;
     }
       
     /* Right column */
@@ -62,9 +60,6 @@ body {
 
         width: 70%;
         height: 100%;
-
-        background-color: #f1f1f1;
-        outline: solid green 2px;
     }
 }
 
