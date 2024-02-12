@@ -142,7 +142,7 @@ body {
     float: right;
 
     width: 100%;
-    height: 10%;
+    height: 20%;
 
     background-color: rgba(5, 5, 23, 0.8);
     color: white;
@@ -153,4 +153,68 @@ body {
     border-radius: 10px;
     outline: none;
     border: none;
+}
+
+#extra-submit-box {
+    width: 28%;
+    height: 15%;
+
+}
+
+.extra-submit-button {
+    position: fixed;
+
+    bottom: 10px;
+    margin-top: auto;
+
+    right: 10px;
+
+    background-color: greenyellow;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 48px;
+
+    transition-duration: .2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(163, 220, 47);
+
+        transition-duration: .2s;
+    }
+
+    &:active {
+        background-color: rgb(163, 180, 47);;
+    }
+}
+
+.extra-close-button {
+    background-color: greenyellow;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 48px;
+
+    position: fixed;
+
+    margin-top: auto;
+
+    bottom: 10px;
+    right: calc(20px + 28%);
+    
+    transition-duration: .2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(163, 220, 47);
+
+        transition-duration: .2s;
+    }
+
+    &:active {
+        background-color: rgb(163, 180, 47);;
+    }
 }
