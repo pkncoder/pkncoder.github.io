@@ -23,6 +23,17 @@ body {
     outline: none;
 }
 
+#answer {
+    width: 99%;
+    height: 5vh;
+
+    font-size: 24px;
+    text-align: center;
+
+    border-radius: 20px;
+    border: none;
+}
+
 #text-div {
     position: absolute;
     text-align: center;
