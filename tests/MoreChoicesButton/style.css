@@ -23,6 +23,11 @@ body {
     outline: none;
 }
 
+#text-div {
+    position: fixed;
+    text-align: center;
+}
+
 .extra-divs {
     background-color: rgb(255, 106, 0);
     border-radius: 10px;
@@ -34,6 +39,8 @@ body {
     left: 50%;
 
     position: fixed;
+    
+    z-index: 4;
 }
 
 #inner-holder {
