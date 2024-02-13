@@ -24,8 +24,16 @@ body {
 }
 
 #text-div {
-    position: fixed;
+    position: absolute;
     text-align: center;
+
+    & input {
+        width: 80%;
+
+        border: none;
+
+        text-align: center;
+    }
 }
 
 .extra-divs {
