@@ -28,11 +28,13 @@ body {
     text-align: center;
 
     & input {
-        width: 80%;
+        width: 90%;
 
         border: none;
+        border-radius: 10px;
 
         text-align: center;
+
     }
 }
 
