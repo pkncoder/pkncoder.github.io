@@ -149,7 +149,7 @@ body {
 
     right: 10px;
 
-    background-color: rgb(168, 156, 25);
+    background-color: rgb(199, 185, 30);
 
     border: none;
     border-radius: 20px;
@@ -160,18 +160,18 @@ body {
 
     &:hover {
         cursor: pointer;
-        background-color: rgb(124, 116, 19);
+        background-color: rgb(168, 156, 25);
 
         transition-duration: .2s;
     }
 
     &:active {
-        background-color: rgb(102, 95, 17);
+        background-color: rgb(124, 116, 19);
     }
 }
 
 .extra-close-button {
-    background-color: rgb(168, 156, 25);;
+    background-color: rgb(199, 185, 30);
 
     border: none;
     border-radius: 20px;
@@ -189,7 +189,7 @@ body {
 
     &:hover {
         cursor: pointer;
-        background-color: rgb(124, 116, 19);
+        background-color: rgb(168, 156, 25);
 
         transition-duration: .2s;
     }
