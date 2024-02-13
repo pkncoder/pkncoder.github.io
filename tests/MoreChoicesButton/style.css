@@ -36,38 +36,6 @@ body {
     position: fixed;
 }
 
-#extras-div-one {
-    
-    transform: translate(-50%, -200%);
-    transition-duration: 1s;
-    
-    visibility: hidden;
-}
-
-#extras-div-two {
-    
-    transform: translate(-50%, -200%);
-    transition-duration: 1s;
-    
-    visibility: hidden;
-}
-
-#extras-div-three {
-    
-    transform: translate(-50%, -200%);
-    transition-duration: 1s;
-    
-    visibility: hidden;
-}
-
-#extras-div-four {
-    
-    transform: translate(-50%, -200%);
-    transition-duration: 1s;
-    
-    visibility: hidden;
-}
-
 #inner-holder {
     width: calc(100% - 20px);
     height: calc(100% - 30px);
@@ -149,16 +117,6 @@ body {
 
 
 
-
-.input-extras {
-    width: 100%;
-    height: calc(100% / 6);
-
-    border: none;
-    font-size: 36px;
-
-    background-color: rgb(255, 85, 0);
-}
 
 #code-result-box {
     float: right;
