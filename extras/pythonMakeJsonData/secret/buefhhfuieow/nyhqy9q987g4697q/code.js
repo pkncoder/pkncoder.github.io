@@ -170,3 +170,76 @@ function generateBasicFunctionterCode()
     // Now do the final 'return' stuff
     document.getElementById("answer").value = code;
 }
+
+function generateFullFunctiontierCode()
+{
+    // The inputs from the user
+    // Button testing on-ieness
+    let buttonName = document.getElementById("extrasButtonFuncter").value;
+
+    // Function on Activate stuff
+    let functionOnActive = document.getElementById("extrasFunctionFuncter").value;
+    let functionOnActivatePerams = document.getElementById("extrasFunctionPeramsFuncter").value;
+
+    // Function class connector
+    let functionClassConector = document.getElementById("extrasClassConnecterFuncter").value;
+
+    // On false function stuff
+    let onFalseFunction = document.getElementById("extrasFalseFunctionFuncter").value;
+    let onFalsePerams = document.getElementById("extrasFalsePeramsFuncter").value;
+
+    // Button activition stuff
+    let buttonActivitionType = document.getElementById("extrasActivateTypeFuncter").value;
+
+    // Our code line that we will add to
+    // Clarify the stuff we know (yep thats it)
+    let code = buttonName + ".";
+
+    // Test to see what kind of activition it is testing
+    // If the string has held in it, so while held
+    if (buttonActivitionType.indexOf("held") != -1)
+    {
+        // Add the while held function and everything we know til then
+        code += "whileHeld(new InstantCommand(() -> ";
+    }
+
+    // If no held, then just default to a press
+    else
+    {
+        // Add the on true function and everything we know til then
+        code += "onTrue(new InstantCommand(() -> ";
+    }
+
+    // Then test to see if there is anything inside of function class connector
+    // If there is then add that to code
+    if (functionClassConector != "")
+    {
+        code += functionClassConector + ".";
+    }
+
+    // Then add the rest of the stuff we know until the onFalse stuff
+    code += functionOnActive + "(" + functionOnActivatePerams + ")))";
+
+    // Test to see if there is any on False stuff
+    if (onFalseFunction != "")
+    {
+        // If there is then add everything up until the class connecter crap
+        code += ".onFalse(new InstantCommand(() -> ";
+
+        // Test for the class connectar crap
+        if (functionClassConector != "")
+        {
+            code += functionClassConector + ".";
+        }
+
+        // Then add the onFalse function and the perams
+        code += onFalseFunction + "(" + onFalsePerams + ")))";
+    }
+
+    // Finally add the semi-colon here due to not knowing to put it above the onfalse stuff
+    code += ";";
+
+    // Do our returny stuff
+    document.getElementById("extraAnsFunctier").value = code;
+    document.getElementById("answer").value = code
+}
