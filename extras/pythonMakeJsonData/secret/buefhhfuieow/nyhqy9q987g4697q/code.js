@@ -144,3 +144,29 @@ function generateButtonMappingFull()
     document.getElementById("answer").value = code
 
 }
+
+
+function generateBasicFunctionterCode()
+{
+    // The inputs from the user
+    let buttonName = document.getElementById("buttonFuncter").value;
+    let functionOnActivate = document.getElementById("functionFuncter").value;
+    let functionClassConector = document.getElementById("functionConecter").value.trim();
+
+    // The line of code that we will make
+    // Add everything that we know about
+    let code = buttonName + ".onTrue(new InstantCommand(() -> ";
+
+    // Test to see if there is a function Class connector
+    if (functionClassConector != "")
+    {
+        // Add the class connecter and a dot at the end
+        code += functionClassConector + ".";
+    }
+
+    // Finally, add the final function stuff and the final parenthesies (or whatever they are)
+    code += functionOnActivate + "()));";
+
+    // Now do the final 'return' stuff
+    document.getElementById("answer").value = code;
+}
