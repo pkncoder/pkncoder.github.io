@@ -175,21 +175,21 @@ function generateFullFunctiontierCode()
 {
     // The inputs from the user
     // Button testing on-ieness
-    let buttonName = document.getElementById("extrasButtonFuncter").value;
+    let buttonName = document.getElementById("extrasButtonFuncter").value.trim();
 
     // Function on Activate stuff
-    let functionOnActive = document.getElementById("extrasFunctionFuncter").value;
-    let functionOnActivatePerams = document.getElementById("extrasFunctionPeramsFuncter").value;
+    let functionOnActive = document.getElementById("extrasFunctionFuncter").value.trim();
+    let functionOnActivatePerams = document.getElementById("extrasFunctionPeramsFuncter").value.trim();
 
     // Function class connector
-    let functionClassConector = document.getElementById("extrasClassConnecterFuncter").value;
+    let functionClassConector = document.getElementById("extrasClassConnecterFuncter").value.trim();
 
     // On false function stuff
-    let onFalseFunction = document.getElementById("extrasFalseFunctionFuncter").value;
-    let onFalsePerams = document.getElementById("extrasFalsePeramsFuncter").value;
+    let onFalseFunction = document.getElementById("extrasFalseFunctionFuncter").value.trim();
+    let onFalsePerams = document.getElementById("extrasFalsePeramsFuncter").value.trim();
 
     // Button activition stuff
-    let buttonActivitionType = document.getElementById("extrasActivateTypeFuncter").value;
+    let buttonActivitionType = document.getElementById("extrasActivateTypeFuncter").value.toLowerCase();
 
     // Our code line that we will add to
     // Clarify the stuff we know (yep thats it)
@@ -199,8 +199,8 @@ function generateFullFunctiontierCode()
     // If the string has held in it, so while held
     if (buttonActivitionType.indexOf("held") != -1)
     {
-        // Add the while held function and everything we know til then
-        code += "whileHeld(new InstantCommand(() -> ";
+        // Add the while true function and everything we know til then
+        code += "whileTrue(new InstantCommand(() -> ";
     }
 
     // If no held, then just default to a press
