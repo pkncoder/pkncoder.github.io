@@ -200,14 +200,14 @@ function generateFullFunctiontierCode()
     if (buttonActivitionType.indexOf("held") != -1)
     {
         // Add the while true function and everything we know til then
-        code += "whileTrue(new InstantCommand(() -> ";
+        code += "whileTrue(new InstantCommand(\n\t() -> ";
     }
 
     // If no held, then just default to a press
     else
     {
         // Add the on true function and everything we know til then
-        code += "onTrue(new InstantCommand(() -> ";
+        code += "onTrue(new InstantCommand(\n\t() -> ";
     }
 
     // Then test to see if there is anything inside of function class connector
@@ -224,7 +224,7 @@ function generateFullFunctiontierCode()
     if (onFalseFunction != "")
     {
         // If there is then add everything up until the class connecter crap
-        code += ".onFalse(new InstantCommand(() -> ";
+        code += ".onFalse(new InstantCommand(\n\t() -> ";
 
         // Test for the class connectar crap
         if (functionClassConector != "")
@@ -241,7 +241,7 @@ function generateFullFunctiontierCode()
 
     // Do our returny stuff
     document.getElementById("extraAnsFunctier").value = code;
-    document.getElementById("answer").value = code
+    document.getElementById("answer").value = code;
 }
 
 function generateSimpleOnOff()
@@ -273,5 +273,50 @@ function generateSimpleOnOff()
     code += "}\n";
 
     // Do our returny
+    document.getElementById("answer").value = code;
+}
+
+function generateFullOnOffCode()
+{
+    // User inputes
+    let motorName = document.getElementById("extrasMotorNameOnOff").value;
+    let motorBoolName = document.getElementById("extrasBoolNameOnOff").value;
+    let speedOrSpeedVarName = document.getElementById("extrasSpeedNameOnOff").value;
+    let functionName = document.getElementById("extrasFunctionNameOnOff").value.trim();
+
+    // Declare the code line we will add to
+    let code = "";
+
+    // Start adding our code
+    // This is for the optional function name
+    // No functionName
+    if (functionName === "")
+    {
+        code += "public void " + motorName + "OnOff()\n";
+    }
+
+    // Custom functoin name
+    else
+    {
+        code += "public void " + functionName + "()\n";
+    }
+
+    // Rest of the code
+    code += "{\n";
+    code += "\n";
+    code += "\tif (" + motorBoolName + ")\n";
+    code += "\t{\n";
+    code += "\t\t" + motorName + ".set(" + speedOrSpeedVarName + ");\n";
+    code += "\t}\n";
+    code += "\n";
+    code += "\telse\n";
+    code += "\t{\n";
+    code += "\t\t" + motorName + ".stopMotor();\n";
+    code += "\t}\n";
+    code += "\n";
+    code += "}\n";
+
+    // Do our 'returny' stuff
+    document.getElementById("extraAnsFunctier").value = code;
     document.getElementById("answer").value = code;
 }
