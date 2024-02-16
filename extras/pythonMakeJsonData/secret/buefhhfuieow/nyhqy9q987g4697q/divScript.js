@@ -1,4 +1,4 @@
-const divIds = ["one", "two"]
+const divIds = ["one", "two", "three"]
 
 function expandDiv(divNumber)
 {

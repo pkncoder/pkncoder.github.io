@@ -155,7 +155,7 @@ function generateBasicFunctionterCode()
 
     // The line of code that we will make
     // Add everything that we know about
-    let code = buttonName + ".onTrue(new InstantCommand(() -> ";
+    let code = buttonName + ".onTrue(new InstantCommand(\n\t() -> ";
 
     // Test to see if there is a function Class connector
     if (functionClassConector != "")
@@ -242,4 +242,36 @@ function generateFullFunctiontierCode()
     // Do our returny stuff
     document.getElementById("extraAnsFunctier").value = code;
     document.getElementById("answer").value = code
+}
+
+function generateSimpleOnOff()
+{
+    // User's inputs
+    let motorName = document.getElementById("motorNameOnOff").value;
+    let booleanName = document.getElementById("boolNameOnOff").value;
+    let motorSpeedVariable = document.getElementById("speedVariableOnOff").value
+
+    // The code line we will 'return' with
+    let code = "";
+
+    // Add our code to code
+    code += "public void " + motorName + "OnOff()\n";
+    code += "{\n";
+    code += "\n"
+    code += "\t" + booleanName + " = !" + booleanName + ";\n";
+    code += "\n";
+    code += "\tif (" + booleanName + ")\n";
+    code += "\t{\n";
+    code += "\t\t" + motorName + ".set(" + motorSpeedVariable + ");\n";
+    code += "\t}\n";
+    code += "\n";
+    code += "\telse\n";
+    code += "\t{\n";
+    code += "\t\t" + motorName + ".stopMotor();\n";
+    code += "\t}\n";
+    code += "\n";
+    code += "}\n";
+
+    // Do our returny
+    document.getElementById("answer").value = code;
 }
