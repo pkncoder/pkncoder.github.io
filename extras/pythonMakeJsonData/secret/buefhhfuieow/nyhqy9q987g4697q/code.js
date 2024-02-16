@@ -304,6 +304,8 @@ function generateFullOnOffCode()
     // Rest of the code
     code += "{\n";
     code += "\n";
+    code += "\t" + motorBoolName + " = !" + motorBoolName + ";\n";
+    code += "\n";
     code += "\tif (" + motorBoolName + ")\n";
     code += "\t{\n";
     code += "\t\t" + motorName + ".set(" + speedOrSpeedVarName + ");\n";
