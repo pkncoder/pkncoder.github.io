@@ -317,6 +317,6 @@ function generateFullOnOffCode()
     code += "}\n";
 
     // Do our 'returny' stuff
-    document.getElementById("extraAnsFunctier").value = code;
+    document.getElementById("extraAnsOnOff").value = code;
     document.getElementById("answer").value = code;
 }
