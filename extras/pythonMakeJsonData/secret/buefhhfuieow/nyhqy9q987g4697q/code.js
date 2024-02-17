@@ -322,3 +322,26 @@ function generateFullOnOffCode()
     document.getElementById("extraAnsOnOff").value = code;
     document.getElementById("answer").value = code;
 }
+
+function generateMinNotmax()
+{
+    // Get the user inputs
+    let motor = document.getElementById("motorReverse").value;
+    let reverseBool = document.getElementById("boolNameReverse").value;
+
+    // The line of code we will write to
+    let code = "";
+
+    // Add everything (becuase there is no tests)
+    code += "public void reverse" + motor.charAt(0).toUpperCase() + motor.slice(1) + "()\n";
+    code += "{\n";
+    code += "\n";
+    code += "\t" + reverseBool + " = !" + reverseBool + ";\n";
+    code += "\n";
+    code += "\t" + motor + ".isReversed(" + reverseBool + ");\n";
+    code += "\n";
+    code += "}";
+
+    // Do the return
+    document.getElementById("answer").value = code;
+}
