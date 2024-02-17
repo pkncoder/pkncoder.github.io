@@ -335,11 +335,9 @@ function generateMinNotmax()
     // Add everything (becuase there is no tests)
     code += "public void reverse" + motor.charAt(0).toUpperCase() + motor.slice(1) + "()\n";
     code += "{\n";
-    code += "\n";
     code += "\t" + reverseBool + " = !" + reverseBool + ";\n";
     code += "\n";
-    code += "\t" + motor + ".isReversed(" + reverseBool + ");\n";
-    code += "\n";
+    code += "\t" + motor + ".setInverted(" + reverseBool + ");\n";
     code += "}";
 
     // Do the return
