@@ -343,3 +343,34 @@ function generateMinNotmax()
     // Do the return
     document.getElementById("answer").value = code;
 }
+
+function generateFullReverseCode()
+{
+    // Get the user inputs
+    let motor = document.getElementById("extrasMotorNameReverse").value;
+    let reverseBool = document.getElementById("extrasBoolNameReverse").value;
+    let functionName = document.getElementById("extrasFuncNameReverse").value.trim();
+
+    // The line of code we will write to
+    let code = "";
+
+    // Add everything
+    if (functionName == "")
+    {
+        code += "public void reverse" + motor.charAt(0).toUpperCase() + motor.slice(1) + "()\n";
+    }
+
+    else 
+    {
+        code += "public void " + functionName + "()\n";
+    }
+    code += "{\n";
+    code += "\t" + reverseBool + " = !" + reverseBool + ";\n";
+    code += "\n";
+    code += "\t" + motor + ".setInverted(" + reverseBool + ");\n";
+    code += "}";
+
+    // Do the return
+    document.getElementById("extraAnsReverse").value = code;
+    document.getElementById("answer").value = code;
+}
