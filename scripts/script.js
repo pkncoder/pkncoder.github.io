@@ -557,7 +557,7 @@ function basicMassKECalc()
     document.getElementById("basicMass2KE").value = "";
 }
 
-function basicAverageVelocity()
+function basicAverageVelocityMA()
 {
     let mass = document.getElementById("basicVelMAMass").value;
     let dist = document.getElementById("basicVelMADist").value;
@@ -566,9 +566,7 @@ function basicAverageVelocity()
     
     let PE = mass * g * dist;
 
-    let halfKE = PE;
-
-    let ans = Math.sqrt(((2*KE) / mass));
+    let ans = Math.sqrt(((2*PE) / mass));
 
     document.getElementById("result").value = ans;
 
