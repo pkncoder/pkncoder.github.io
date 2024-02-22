@@ -566,7 +566,7 @@ function basicAverageVelocity()
     
     let PE = mass * g * dist;
 
-    let halfKE = PE / 2;
+    let halfKE = PE;
 
     let ans = Math.sqrt(((2*KE) / mass));
 
