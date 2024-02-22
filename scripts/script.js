@@ -556,3 +556,22 @@ function basicMassKECalc()
     document.getElementById("basicMassKEVel").value = "";
     document.getElementById("basicMass2KE").value = "";
 }
+
+function basicAverageVelocity()
+{
+    let mass = document.getElementById("basicVelMAMass").value;
+    let dist = document.getElementById("basicVelMADist").value;
+
+    const g = 9.8;
+    
+    let PE = mass * g * dist;
+
+    let halfKE = PE / 2;
+
+    let ans = Math.sqrt(((2*KE) / mass));
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("basicVelMAMass").value = "";
+    document.getElementById("basicVelMADist").value = "";
+}
