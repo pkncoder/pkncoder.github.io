@@ -352,6 +352,32 @@ function getGeometricSequence()
     document.getElementById("numThreeGeoSequence").value = "";
 }
 
+function solveXOppTrig()
+{
+    let reference = document.getElementById("referenceTrigOppX").value;
+    let opposite = document.getElementById("oppLenTrigOppX").value;
+
+    let ans = opposite / (Math.sin(reference));
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("referenceTrigOppX").value = "";
+    document.getElementById("oppLenTrigOppX").value = "";
+}
+
+function solveXAgjTrig()
+{
+    let reference = document.getElementById("referenceTrigAgjX").value;
+    let adj = document.getElementById("adjLenTrigAgjX").value;
+
+    let ans = adj / (Math.cos(reference));
+
+    document.getElementById("result").value = ans;
+
+    document.getElementById("referenceTrigAgjX").value = "";
+    document.getElementById("adjLenTrigAgjX").value = "";
+}
+
 
 
 
