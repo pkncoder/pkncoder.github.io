@@ -1,0 +1,60 @@
+@Override
+public void initialize() {
+
+}
+-*?-
+@Override
+public void execute() {
+    
+}
+-*?-
+@Override
+public void end(boolean interrupted) {
+
+}
+-*?-
+@Override
+public boolean isFinished() {
+
+}
+-*?-
+package frc.robot.commands;
+
+import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.ExampleSubsystem;
+
+public class ExampleCommand extends Command {
+    
+    /**
+     * Java constructer
+     *
+     * @param exampleSubsystem - subsystem that the command uses to interact with anything it needs to use.
+     */
+    public StopClawEncoder(ExampleSubsystem exampleSubsystem) {
+        
+    }
+
+    // Runs once when the command starts
+    @Override
+    public void initialize() {
+        
+    }
+
+    // Runs every itteration the command is running
+    @Override
+    public void execute() {
+        
+    }
+
+    // Runs once whenever the command is finished or is stopped
+    @Override
+    public void end(boolean interrupted) {
+
+    }
+
+    // Decides if the command is finished while assuming it isn't interupted
+    @Override
+    public boolean isFinished() {
+        
+    }
+}
