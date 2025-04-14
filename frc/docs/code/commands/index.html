@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/highlight/styles/default.min.css">
         <script src="/highlight/highlight.min.js"></script>
 
-        <script src="./code.js"></script>
+        <script src="../code.js"></script>
         <script>putCodeExamples('./commands.pkn')</script>
         
         <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
@@ -77,18 +77,24 @@
 
                 <div class="container px-5">
 
+                    <p class="display-4">What is a Command?</p>
+                    <div class="container mb-5">
+                        <div style="font-size: 1.3rem;">
+                            <p>Commands are an important part of the robot code. They provide mini-functions that can be used by themselves or combined together like bricks to create useful functions to your robot.</p>
+                            <p>Commonly, commands commonly work by passing in one or multiple <a href="../subsystems">subsystems</a> to be used to interact with everything that the command needs to (ex. motors, encoders, lights).</p>
+                        </div>
+                    </div>
+
                     <p class="display-4">Parts of a Command</p>
                     <div class="container mb-5">
 
                         <div style="font-size: 1.3rem;">
-                            <p>Commands are an important part of FRC robot code. They provide mini-functions that can be used by themselves or combined together like Legos to create useful functions to your robot.</p>
-                            <p>Commands commonly work by passing in one or multiple subsystems to be used to interact with everything that the command needs to (ex. motors, encoders, lights).</p>
-                            <p>Commands have different parts to them:</p>
+                            <p>Commands have 4 main parts to them:</p>
                             <ol>
                                 <li>initialize()</li>
                                 <li>execute()</li>
                                 <li>end()</li>
-                                <li>isFinished()</li>
+                                <li>isFinished()<li>
                             </ol>
                         </div>
 
@@ -162,7 +168,7 @@
 
                     </div>
                     
-                    <p class="display-4" id="etteste">Full Command File</p>
+                    <p class="display-4">Full Command File</p>
                     <div class="container mb-5">
                         <div style="font-size: 1.3rem;">
                             <p>All of the 4 main parts of the command all come together in one java file.</p><br>
@@ -174,12 +180,24 @@
                         </div>
 
                         <div class="container">
-                            
                             <pre class="text-start rounded shadow" style="width: fit-content;"><code class="language-java" id="codeBlock-4"></code></pre>
-                            <div style="font-size: 1.3rem;">
-                                <p>If you want to use this command, check out the <a href="/notMadeYet.html">Command Template</a>, where you can customize it before generating.</p>
-                            </div>
+                        </div>
 
+                        <div style="font-size: 1.3rem;">
+                            <p>If you want to use this command in your code, check out the <a href="/notMadeYet.html">Command Template</a>, where you can customize it before generating.</p>
+                        </div>
+                    </div>
+
+                    <p class="display-4">How to Use Commands</p>
+                    <div class="container mb-5">
+                        <div style="font-size: 1.3rem;">
+                            <p>Commands are the base of many great robots out there (including our's). Here are ways to use them, and links to their docs!</p>
+                            <ul>
+                                <li><a href="/notMadeYet.html">CommandXboxController</a></li>
+                                <li><a href="/notMadeYet.html">Trigger</a></li>
+                                <li><a href="/notMadeYet.html">CommandSceduler</a></li>
+                                <li><a href="/notMadeYet.html">Command Compositions</a></li>
+                            </ul>
                         </div>
                     </div>
 

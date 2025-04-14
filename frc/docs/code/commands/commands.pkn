@@ -30,7 +30,7 @@ public class ExampleCommand extends Command {
      *
      * @param exampleSubsystem - subsystem that the command uses to interact with anything it needs to use.
      */
-    public StopClawEncoder(ExampleSubsystem exampleSubsystem) {
+    public ExampleCommand(ExampleSubsystem exampleSubsystem) {
         
     }
 
