@@ -65,7 +65,6 @@
         </nav>
 
         <div class="top p-2 container">
-            
             <div class="d-flex mt-0 mb-auto gap-2">
                 <div class="card p-2 shadow">
                     <p class="card-title h2 m-3">Initial + Terminal</p>
@@ -84,7 +83,27 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="top p-2 container">
+            <div class="d-flex mt-0 mb-auto gap-2">
+                <div class="card p-2 shadow">
+                    <p class="card-title h2 m-3">Two Vectors</p>
+                    <div class="card-body">
+                        <form onsubmit="twoVectors()">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="twoVectorOne" placeholder="(2, 3)">
+                                <label for="twoVectorOne">Vector One</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="twoVectorTwo" placeholder="(4, 6)">
+                                <label for="twoVectorOne">Vector Two</label>
+                            <div>
+                            <button type="submit" class="btn btn-md btn-primary mt-3">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </body>
