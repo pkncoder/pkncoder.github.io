@@ -26,7 +26,7 @@ class Vector2D {
     }
 
     vectorsAreParallel(otherVector) {
-        return ((this.x / otherVector.x) === (this.y / otherVector.y));
+        return ((this.x / otherVector.x) === (1 / (this.y / otherVector.y)));
     }
 }
 
