@@ -30,14 +30,35 @@ class Vector2D {
     }
 }
 
-function initialTerminalPoint() {
-    let initialPoint = $("#initalPoint").val().trim().replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").split(",");
-    let terminalPoint = $("#terminalPoint").val().trim().replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "").split(",");
-    console.log(initialPoint);
-    console.log(terminalPoint);
+function createVector(inputId) {
 
-    let vector = new Vector2D(parseFloat(terminalPoint[0] - initialPoint[0]), parseFloat(terminalPoint[1] - initialPoint[1]));
-    gatherAllOneVectorData(vector);
+    let vectorStrs = $("#" + inputId).val()
+        .replaceAll(" ", "")
+        .replaceAll("(", "")
+        .replaceAll(")", "")
+        .replaceAll("<", "")
+        .replaceAll(">", "")
+        .split(",");
+    
+    for (var i = 0; i < 2; i++) {
+        if (vectorStrs[i].includes("/")) {
+            let fractionSplits = vectorStrs[i].split("/");
+            vectorStrs[i] = parseFloat(fractionSplits[0]) / parseFloat(fractionSplits[1]);
+        }
+    }
+
+    return new Vector2D(parseFloat(vectorStrs[0]), parseFloat(vectorStrs[1]));
+}
+
+function initialTerminalPoint() {
+    let initialPoint  = createVector("initalPoint");
+    let terminalPoint = createVector("terminalPoint");
+    console.log(initialPoint.x)
+    console.log(terminalPoint.x)
+
+    let finalVector = new Vector2D(parseFloat(terminalPoint.x - initialPoint.x), parseFloat(terminalPoint.y - initialPoint.y));
+    console.log(finalVector.x);
+    gatherAllOneVectorData(finalVector);
 }
 
 function twoVectors() {
