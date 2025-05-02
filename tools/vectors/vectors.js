@@ -26,7 +26,7 @@ class Vector2D {
     }
 
     vectorsAreParallel(otherVector) {
-        return ((this.x / otherVector.x) === (1 / (this.y / otherVector.y)));
+        return ((this.x / otherVector.x) === ((this.y / otherVector.y)));
     }
 }
 
@@ -72,6 +72,11 @@ function twoVectors() {
     let vectorTwo = new Vector2D(parseFloat(vectorTwoStr[0]), parseFloat(vectorTwoStr[1]));
 
     gatherAllTwoVectorData(vectorOne, vectorTwo);
+}
+
+function oneVector() {
+    let vector = createVector("singleVector");
+    gatherAllOneVectorData(vector);
 }
 
 function gatherAllOneVectorData(vector) {
